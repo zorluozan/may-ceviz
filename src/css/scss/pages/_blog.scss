@@ -18,7 +18,8 @@
 
       @include media-breakpoint-up(lg) {
         width: 100%;
-        height: rem(264);
+        // height: rem(264);
+        height: unset;
       }
     }
   }
