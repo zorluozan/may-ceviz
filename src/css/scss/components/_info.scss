@@ -1,0 +1,16 @@
+.info {
+  background-color: getColor(neutrals-100);
+  border-radius: rem(8);
+  padding: rem(16);
+  margin-bottom: rem(20);
+  display: flex;
+
+  &__link {
+    margin-right: rem(10);
+  }
+
+  &__text {
+    @include setFont(16px, regular, getColor(neutrals-700), 24);
+    margin: rem(4) 0 0 0;
+  }
+}

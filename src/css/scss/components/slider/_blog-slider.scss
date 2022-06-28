@@ -1,0 +1,74 @@
+.blog {
+  &-heading {
+    text-align: center;
+    padding: rem(32) rem(20) rem(16) rem(20);
+
+    @include media-breakpoint-up(xl) {
+      padding: rem(40) 0 rem(40) 0;
+    }
+
+    &__title {
+      @include setFont(18px, b-regular, getColor(primary-green-700), 32);
+      margin-bottom: 0;
+
+      @include media-breakpoint-up(lg) {
+        @include setFont(24px, b-regular, getColor(primary-green-700), 32);
+        margin-bottom: rem(10);
+      }
+    }
+
+    &__innertitle {
+      @include setFont(24px, semibold, getColor(neutrals-900), 40);
+
+      @include media-breakpoint-up(lg) {
+        @include setFont(32px, semibold, getColor(neutrals-900), 40);
+      }
+    }
+  }
+
+  &-slider {
+    &__item {
+      padding-right: rem(20);
+
+      @include media-breakpoint-up(xl) {
+        padding-right: rem(32);
+      }
+
+      & img {
+        width: rem(287);
+        height: rem(227);
+        object-fit: cover;
+        border-radius: rem(16);
+
+        @include media-breakpoint-up(lg) {
+          width: 100%;
+          height: rem(264);
+        }
+      }
+    }
+    &__texts {
+      margin-top: rem(20);
+      & h1 {
+        @include setFont(18px, medium, getColor(neutrals-black), 28);
+      }
+
+      & p {
+        @include setFont(14px, regular, getColor(neutrals-700));
+        display: block;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        overflow: hidden;
+        max-height: 4.2em;
+        line-height: 1.4em;
+      }
+    }
+  }
+
+  & .btn-all {
+    margin: rem(32) 0;
+
+    @include media-breakpoint-up(lg) {
+      margin: rem(48) 0 rem(96) 0;
+    }
+  }
+}

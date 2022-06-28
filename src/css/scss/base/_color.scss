@@ -1,0 +1,102 @@
+// ui color palette
+$neutrals-black: #000000;
+$neutrals-white: #ffffff;
+$neutrals-50: #fafafa;
+$neutrals-100: #f2f2f2;
+$neutrals-200: #eeeeee;
+$neutrals-300: #d9d9d9;
+$neutrals-400: #b1b1b1;
+$neutrals-500: #848484;
+$neutrals-600: #646464;
+$neutrals-700: #525252;
+$neutrals-800: #383838;
+$neutrals-900: #252525;
+$notifications-success-25: #f9fffc;
+$notifications-success-50: #e7f8f0;
+$notifications-success-100: #b6e9d1;
+$notifications-success-200: #92deba;
+$notifications-success-300: #60cf9b;
+$notifications-success-400: #41c588;
+$notifications-success-500: #12b76a;
+$notifications-success-600: #10a760;
+$notifications-success-700: #0d824b;
+$notifications-success-800: #0a653a;
+$notifications-success-900: #084d2d;
+$notifications-critical-50: #fdeceb;
+$notifications-critical-100: #f8c4c1;
+$notifications-critical-200: #f4a8a3;
+$notifications-critical-300: #ef8079;
+$notifications-critical-400: #ec685f;
+$notifications-critical-500: #e74237;
+$notifications-critical-600: #d23c32;
+$notifications-critical-700: #a42f27;
+$notifications-critical-800: #7f241e;
+$notifications---critical---900: #611c17;
+$primary-green-50: #e6f8ea;
+$primary-green-100: #b0eabf;
+$primary-green-200: #8ae0a0;
+$primary-green-300: #54d275;
+$primary-green-400: #33c95a;
+$primary-green-500: #00bc31;
+$primary-green-600: #00ab2d;
+$primary-green-700: #008523;
+$primary-green-800: #00671b;
+$primary-green-900: #004f15;
+$gray-1000: #101828;
+
+$ui-colors: (
+  neutrals-black: #000000,
+  neutrals-white: #ffffff,
+  neutrals-50: #fafafa,
+  neutrals-100: #f2f2f2,
+  neutrals-200: #eeeeee,
+  neutrals-300: #d9d9d9,
+  neutrals-400: #b1b1b1,
+  neutrals-500: #848484,
+  neutrals-600: #646464,
+  neutrals-700: #525252,
+  neutrals-800: #383838,
+  neutrals-900: #252525,
+  notifications-success-25: #f9fffc,
+  notifications-success-50: #e7f8f0,
+  notifications-success-100: #b6e9d1,
+  notifications-success-200: #92deba,
+  notifications-success-300: #60cf9b,
+  notifications-success-400: #41c588,
+  notifications-success-500: #12b76a,
+  notifications-success-600: #10a760,
+  notifications-success-700: #0d824b,
+  notifications-success-800: #0a653a,
+  notifications-success-900: #084d2d,
+  notifications-critical-50: #fdeceb,
+  notifications-critical-100: #f8c4c1,
+  notifications-critical-200: #f4a8a3,
+  notifications-critical-300: #ef8079,
+  notifications-critical-400: #ec685f,
+  notifications-critical-500: #e74237,
+  notifications-critical-600: #d23c32,
+  notifications-critical-700: #a42f27,
+  notifications-critical-800: #7f241e,
+  notifications---critical---900: #611c17,
+  primary-green-50: #e6f8ea,
+  primary-green-100: #b0eabf,
+  primary-green-200: #8ae0a0,
+  primary-green-300: #54d275,
+  primary-green-400: #33c95a,
+  primary-green-500: #00bc31,
+  primary-green-600: #00ab2d,
+  primary-green-700: #008523,
+  primary-green-800: #00671b,
+  primary-green-900: #004f15,
+  gray-1000: #101828,
+);
+
+@function getColor($colorName) {
+  @each $map-key, $map-value in $ui-colors {
+    @if $map-key==$colorName {
+      @return $map-value;
+    }
+  }
+
+  @return $colorName;
+}

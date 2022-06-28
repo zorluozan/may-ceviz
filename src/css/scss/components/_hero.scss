@@ -1,0 +1,46 @@
+.hero {
+  padding-top: rem(80);
+
+  &-slider {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    }
+
+    &__heading {
+      @include absolute() {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      text-align: center;
+      padding: rem(44) rem(18);
+      width: 100%;
+      z-index: 2;
+
+      @include media-breakpoint-up(lg) {
+        width: unset;
+      }
+      & p {
+        @include setFont(14px, regular, rgba(255, 255, 255, 1), 21);
+
+        @include media-breakpoint-up(lg) {
+          @include setFont(18px, regular, rgba(255, 255, 255, 1), 28);
+        }
+      }
+    }
+
+    &__title {
+      @include setFont(20px, bold, rgba(255, 255, 255, 1), 38);
+
+      @include media-breakpoint-up(lg) {
+        @include setFont(28px, bold, rgba(255, 255, 255, 1), 38);
+        margin-bottom: rem(11);
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.about-content {
+  &__wrapper {
+    padding: rem(40) 0 rem(36) 0;
+
+    @include media-breakpoint-up(lg) {
+      padding: rem(72) rem(112);
+    }
+
+    &-text {
+      text-align: center;
+      @include setFont(14px, regular, getColor(neutrals-900), 24);
+
+      @include media-breakpoint-up(lg) {
+        @include setFont(16px, regular, getColor(neutrals-900), 24);
+      }
+    }
+  }
+
+  &__statistics {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: rem(60);
+
+    @include media-breakpoint-up(lg) {
+      justify-content: space-evenly;
+    }
+  }
+
+  &__numbers {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    & span {
+      @include setFont(40px, semibold, getColor(primary-green-800), 60);
+      letter-spacing: -0.05em;
+
+      @include media-breakpoint-up(lg) {
+        @include setFont(58px, semibold, getColor(primary-green-800), 87);
+      }
+    }
+
+    & p {
+      @include setFont(24px, medium, getColor(neutrals-black), 36);
+      letter-spacing: -0.05em;
+    }
+  }
+
+  &__imgwrapper {
+    @include media-breakpoint-up(lg) {
+      padding: rem(72) 0;
+    }
+    & img {
+      border-radius: rem(16);
+    }
+  }
+
+  &__info {
+    @include media-breakpoint-up(lg) {
+      padding: rem(72) 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-right: rem(120);
+    }
+
+    &-title {
+      @include setFont(20px, bold, #1d2939, 38);
+      margin: rem(32) 0;
+
+      @include media-breakpoint-up(lg) {
+        @include setFont(28px, bold, #1d2939, 38);
+        margin: 0 0 rem(32) 0;
+      }
+    }
+
+    &-text {
+      @include setFont(14px, regular, getColor(neutrals-900), 24);
+
+      @include media-breakpoint-up(lg) {
+        @include setFont(16px, regular, getColor(neutrals-900), 24);
+      }
+    }
+  }
+}

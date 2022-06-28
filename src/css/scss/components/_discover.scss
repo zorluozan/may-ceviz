@@ -1,0 +1,59 @@
+.discover {
+  &-link {
+    width: rem(56);
+    height: rem(56);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    bottom: 15%;
+    transform: translate(-10%, -15%);
+
+    @include media-breakpoint-up(lg) {
+      bottom: 10%;
+      transform: translate(-10%, -10%);
+      width: rem(80);
+      height: rem(80);
+    }
+
+    // &:hover {
+    //     svg {
+    //       transform: scaleY(1.5);
+    //     }
+
+    //     // &::after {
+    //     //   animation-duration: 16s;
+    //     // }
+
+    // }
+
+    &::after {
+      content: "";
+      animation: rotateDiscover 32s infinite linear;
+      position: absolute;
+      background-image: url("/dist/media/img/discovercomp/discovertext.svg");
+      width: rem(96);
+      height: rem(96);
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+      @include media-breakpoint-up(lg) {
+        width: rem(144);
+        height: rem(144);
+      }
+    }
+  }
+}
+
+@keyframes rotateDiscover {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

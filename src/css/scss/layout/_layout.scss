@@ -1,0 +1,62 @@
+.menu--scrolled,
+.menu--light {
+  background-color: getColor(neutrals-white);
+
+  & .mobile-menu__links-profile {
+    border: 1px solid rgba(238, 238, 238, 1);
+    color: getColor(neutrals-black);
+
+    & svg path {
+      stroke: currentColor;
+    }
+  }
+
+  & .mobile-menu__links-basket {
+    border: 1px solid rgba(238, 238, 238, 1);
+    color: getColor(neutrals-black);
+    & svg path {
+      fill: currentColor;
+    }
+  }
+
+  & .mobile-menu__icons {
+    background-color: getColor(primary-green-800);
+
+    & span {
+      background-color: getColor(neutrals-white);
+    }
+  }
+
+  & .desktop-menu__navbar {
+    background-color: getColor(neutrals-white);
+  }
+
+  & .desktop-menu__links-profile {
+    border: 1px solid rgba(238, 238, 238, 1);
+    color: getColor(neutrals-black);
+
+    & svg path {
+      stroke: currentColor;
+    }
+  }
+
+  & .desktop-menu__links-basket {
+    border: 1px solid rgba(238, 238, 238, 1);
+    color: getColor(neutrals-black);
+    & svg path {
+      fill: currentColor;
+    }
+  }
+
+  & .desktop-menu__link {
+    color: getColor(neutrals-black);
+
+    & .downarrow path {
+      stroke: currentColor;
+    }
+  }
+
+  // & .desktop-menu__dropdown .nav-link {
+  //   color: getColor(neutrals-black);
+  // }
+}

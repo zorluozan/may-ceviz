@@ -1,0 +1,41 @@
+.btn-all {
+  border: 1px solid getColor(neutrals-300);
+  border-radius: rem(8);
+  padding: rem(10) rem(48);
+  @include setFont(14px, semibold, getColor(neutrals-black), 22);
+}
+
+.btn-more {
+  border: 1px solid getColor(neutrals-300);
+  border-radius: rem(8);
+  padding: rem(10) rem(47);
+  text-align: center;
+  @include setFont(16px, semibold, getColor(neutrals-900), 28);
+}
+
+.btn-send {
+  border: none;
+  border-radius: rem(6);
+  padding: rem(12) rem(24);
+  @include setFont(16px, semibold, getColor(neutrals-white), 24);
+  background-color: getColor(primary-green-800);
+  width: 100%;
+}
+
+.btn-print {
+  display: flex;
+
+  & span {
+    @include setFont(14px, medium, rgba(37, 37, 37, 1), 20);
+    margin-left: rem(8);
+  }
+}
+
+.btn-back {
+  display: flex;
+
+  & span {
+    @include setFont(14px, medium, rgba(0, 0, 0, 1), 20);
+    margin-left: rem(4);
+  }
+}

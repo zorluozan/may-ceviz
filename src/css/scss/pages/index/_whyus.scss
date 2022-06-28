@@ -1,0 +1,127 @@
+.whyus {
+  background-image: url("/dist/media/img/whyus/whyusmobilebg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include media-breakpoint-up(lg) {
+    background-image: url("/dist/media/img/whyus/whyusdesktopbg.png");
+  }
+
+  &-heading {
+    text-align: center;
+    padding: rem(32) rem(20) rem(16) rem(20);
+
+    @include media-breakpoint-up(lg) {
+      padding: rem(96) rem(198);
+    }
+
+    &__title {
+      @include setFont(18px, b-regular, getColor(primary-green-700), 32);
+      margin-bottom: 0;
+
+      @include media-breakpoint-up(lg) {
+        @include setFont(24px, b-regular, getColor(neutrals-white), 32);
+        margin-bottom: rem(14);
+      }
+    }
+
+    &__innertitle {
+      @include setFont(24px, semibold, getColor(neutrals-900), 40);
+
+      @include media-breakpoint-up(lg) {
+        @include setFont(32px, semibold, getColor(neutrals-white), 40);
+        margin-bottom: rem(16);
+      }
+    }
+
+    &__text {
+      @include setFont(14px, regular, getColor(neutrals-800), 22);
+
+      @include media-breakpoint-up(lg) {
+        @include setFont(18px, regular, getColor(neutrals-white), 28);
+      }
+    }
+  }
+
+  &-info {
+    text-align: center;
+    padding: rem(16) rem(32) rem(16) rem(32);
+
+    @include media-breakpoint-up(lg) {
+      padding: 0 0 rem(96) 0;
+    }
+
+    &__wrapper {
+      @include media-breakpoint-up(lg) {
+        position: relative;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        height: 174px;
+      }
+    }
+
+    &__circular {
+      display: block;
+      margin: 0 auto;
+
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+
+    &__image {
+      display: block;
+      margin: 0 auto;
+
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+
+    &__whiteimage {
+      display: none;
+
+      @include media-breakpoint-up(lg) {
+        display: inline-block;
+      }
+    }
+
+    &__wavyarrow {
+      display: none;
+      @include media-breakpoint-up(xl) {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: -115px;
+      }
+    }
+
+    &__arrow {
+      display: flex;
+      flex-direction: column;
+
+      @include media-breakpoint-up(lg) {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+
+    & h4 {
+      @include setFont(20px, semibold, getColor(neutrals-900), 26);
+      margin: rem(30) 0 rem(12) 0;
+
+      @include media-breakpoint-up(lg) {
+        color: getColor(neutrals-white);
+      }
+    }
+
+    & p {
+      @include setFont(14px, regular, getColor(neutrals-900), 22);
+
+      @include media-breakpoint-up(lg) {
+        @include setFont(16px, regular, #ffffffcc, 24);
+      }
+    }
+  }
+}

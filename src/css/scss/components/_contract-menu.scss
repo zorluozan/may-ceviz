@@ -1,0 +1,40 @@
+.contract-menu {
+  margin: rem(32) 0;
+  border: 1px solid getColor(neutrals-200);
+  border-radius: rem(8);
+  @include media-breakpoint-up(lg) {
+    border: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding: rem(20);
+  }
+
+  &__item {
+    padding: rem(13) 0;
+    &:not(:last-child) {
+      border-bottom: 1px solid getColor(neutrals-200);
+    }
+  }
+
+  &__link {
+    @include setFont(16px, regular, rgba(0, 0, 0, 1), 24);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.active {
+      @include setFont(16px, semibold, rgba(0, 133, 35, 1), 24);
+
+      &::after {
+        content: "";
+        display: block;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcuMjkxOTkgMTUuNDE2NkwxMi43MDg3IDkuOTk5OTJMNy4yOTE5OSA0LjU4MzI1IiBzdHJva2U9IiMwMDg1MjMiIHN0cm9rZS13aWR0aD0iMi4xNjY2NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=");
+        width: rem(20);
+        height: rem(20);
+      }
+    }
+  }
+}

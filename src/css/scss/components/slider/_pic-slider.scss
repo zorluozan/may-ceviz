@@ -1,0 +1,77 @@
+.pic {
+  position: relative;
+  &-slider {
+    &__item {
+      position: relative;
+    }
+
+    & .slick-dots {
+      @include absolute() {
+        display: flex;
+        left: 50%;
+        bottom: 5%;
+        transform: translate(-50%, -5%);
+      }
+
+      & li {
+        &:not(:last-child) {
+          margin-right: rem(7);
+        }
+        & button {
+          border: none;
+          background-color: rgba(255, 255, 255, 0.34);
+          color: transparent;
+          width: rem(45);
+          height: 2px;
+        }
+      }
+
+      & .slick-active {
+        & button {
+          background-color: getColor(neutrals-white);
+        }
+      }
+    }
+
+    &__random {
+      @include absolute() {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      &-title {
+        @include setFont(18px, b-regular, getColor(neutrals-white), 32);
+
+        @include media-breakpoint-up(lg) {
+          @include setFont(24px, b-regular, getColor(neutrals-white), 32);
+        }
+      }
+
+      &-innertitle {
+        @include setFont(28px, semibold, getColor(neutrals-white), 42);
+        margin-bottom: rem(12);
+        white-space: nowrap;
+
+        @include media-breakpoint-up(lg) {
+          @include setFont(56px, semibold, getColor(neutrals-white), 64);
+          margin-bottom: rem(24);
+        }
+      }
+
+      &-text {
+        @include setFont(14px, regular, getColor(neutrals-white), 20);
+        @include media-breakpoint-up(lg) {
+          @include setFont(18px, regular, getColor(neutrals-white), 28);
+          margin-bottom: rem(32);
+        }
+      }
+
+      &-logos {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+/* grid */
+
+$grid-breakpoints: (
+  xs: 0,
+  xsm: 350px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xlg: 1500px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xlg: 1445px,
+);
+
+// /* typography */
+$font-family-base: "Poppins";
+$font-size-base: 1rem;
+
+$link-hover-decoration: none;
+$link-hover-color: none;

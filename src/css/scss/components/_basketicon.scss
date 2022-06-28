@@ -1,0 +1,15 @@
+.basketicon {
+  width: rem(40);
+  height: rem(40);
+  border: 1.08653px solid getColor(neutrals-white);
+  border-radius: 50%;
+  background-color: getColor(primary-green-700);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  @include absolute() {
+    top: rem(19);
+    left: rem(16);
+  }
+}

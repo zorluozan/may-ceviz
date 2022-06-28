@@ -1,0 +1,128 @@
+.intro {
+  @include fixed() {
+    right: rem(20);
+    bottom: rem(20);
+    z-index: 15;
+    width: rem(194);
+    visibility: visible;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: rem(325);
+    bottom: 5%;
+  }
+
+  &-slider {
+    & .slick-list {
+      border-radius: rem(9);
+      @include media-breakpoint-up(lg) {
+        border-radius: rem(16);
+      }
+    }
+
+    &__item {
+      background-color: getColor(neutrals-white);
+      overflow: hidden;
+      display: flex;
+      margin-right: rem(6);
+      border-radius: rem(9);
+      @include media-breakpoint-up(lg) {
+        border-radius: rem(16);
+        margin-right: rem(12);
+      }
+
+      & img {
+        width: rem(84);
+
+        @include media-breakpoint-up(lg) {
+          width: unset;
+        }
+      }
+    }
+
+    & .slick-dots {
+      @include absolute() {
+        display: flex;
+        left: 90%;
+        top: 100%;
+        transform: translate(-90%, -100%);
+      }
+
+      @include media-breakpoint-up(lg) {
+        left: 67%;
+        transform: translate(-67%, -100%);
+      }
+
+      & li {
+        &:not(:last-child) {
+          margin-right: rem(3);
+        }
+        & button {
+          border: none;
+          background: rgba(37, 37, 37, 0.2);
+          color: transparent;
+          width: rem(26);
+          height: 1px;
+
+          @include media-breakpoint-up(lg) {
+            width: rem(30);
+          }
+        }
+      }
+
+      & .slick-active {
+        & button {
+          background-color: getColor(neutrals-900);
+        }
+      }
+    }
+
+    &__heading {
+      padding: rem(21) rem(14);
+
+      @include media-breakpoint-up(lg) {
+        padding: rem(20) rem(14) rem(20) rem(14);
+      }
+      &-title {
+        @include setFont(12px, semibold, getColor(neutrals-black), 18);
+        margin-bottom: rem(21);
+
+        @include media-breakpoint-up(lg) {
+          margin-bottom: rem(8);
+          @include setFont(14px, semibold, getColor(neutrals-black), 18);
+        }
+      }
+      &-text {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+          display: block;
+          @include setFont(13px, regular, getColor(neutrals-800), 18);
+        }
+      }
+    }
+  }
+
+  &-close {
+    @include absolute() {
+      top: rem(-18);
+      right: rem(-5);
+      width: rem(36);
+      height: rem(36);
+      border-radius: rem(48);
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 1);
+      border: 0.9px solid getColor(neutrals-100);
+    }
+
+    @include media-breakpoint-up(lg) {
+      top: rem(-12);
+      right: 0;
+      width: rem(40);
+      height: rem(40);
+    }
+  }
+}

@@ -1,0 +1,87 @@
+$font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+//local font family
+$main-font-family: "Poppins";
+
+@mixin font-face($name, $file, $weight: normal) {
+  @font-face {
+    font-family: $main-font-family;
+    src: local("#{$name}"), url("../fonts/#{$file}.woff") format("woff");
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@mixin font-face-2($name, $file, $weight: normal) {
+  @font-face {
+    font-family: "BerkshireSwash";
+    src: local("#{$name}"), url("../fonts/#{$file}.woff") format("woff");
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+$font-weights: (
+  thin: 100,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  xbold: 800,
+  black: 900,
+  b-regular: 400,
+);
+
+@function getFontWeight($weight) {
+  @return map-get($font-weights, $weight);
+}
+
+// @mixin getFontFamily($family) {
+//    font-weight: getFontWeight($family);
+// }
+
+$uiFonts: (
+  xlight: "#{$main-font-family}-XLight",
+  light: "#{$main-font-family}-Light",
+  regular: "#{$main-font-family}-Regular",
+  medium: "#{$main-font-family}-Medium",
+  semibold: "#{$main-font-family}-SemiBold",
+  bold: "#{$main-font-family}-Bold",
+  xbold: "#{$main-font-family}-ExtraBold",
+  black: "#{$main-font-family}-Black",
+);
+
+$uiFonts2: (
+  regular: "BerkshireSwash-Regular",
+);
+
+@each $map-key, $map-value in $uiFonts {
+  @include font-face($map-value, $map-value, getFontWeight($map-key));
+}
+
+@each $map-key, $map-value in $uiFonts2 {
+  @include font-face-2($map-value, $map-value, getFontWeight($map-key));
+}
+
+@mixin setFont($size, $weight, $color, $line-height: "", $rfs: true) {
+  @if (str-index("#{$weight}", "b-")) {
+    font-family: "BerkshireSwash";
+  }
+
+  @if $rfs {
+    @include rfs($size);
+  } @else {
+    font-size: rem($size);
+  }
+
+  font-weight: getFontWeight($weight);
+  color: getColor($color);
+  @if $line-height != "" {
+    line-height: rem($line-height);
+  }
+}
