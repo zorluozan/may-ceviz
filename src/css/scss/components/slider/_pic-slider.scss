@@ -3,6 +3,33 @@
   &-slider {
     &__item {
       position: relative;
+
+      & .video-container {
+        width: 100%;
+        position: relative;
+      }
+
+      & .video {
+        // background-color: #000;
+        width: 100%;
+        height: 100%;
+
+        &--mobile {
+          display: block;
+
+          @include media-breakpoint-up(md) {
+            display: none;
+          }
+        }
+
+        &--desktop {
+          display: none;
+
+          @include media-breakpoint-up(md) {
+            display: block;
+          }
+        }
+      }
     }
 
     & .slick-dots {
