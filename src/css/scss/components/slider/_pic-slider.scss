@@ -4,6 +4,11 @@
     &__item {
       position: relative;
 
+      @include media-breakpoint-up(xlg) {
+        height: 90vh;
+        max-height: rem(1500);
+      }
+
       & .video-container {
         width: 100%;
         position: relative;
