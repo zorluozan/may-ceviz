@@ -183,9 +183,9 @@ $(window).scroll(function () {
   }
 
   if ($(window).width() >= 992 && scroll >= 80) {
-    $(".js-desktop-navbar").addClass("menu--scrolled");
+    $(".js-desktop-menu").addClass("menu--scrolled");
   } else {
-    $(".js-desktop-navbar").removeClass("menu--scrolled");
+    $(".js-desktop-menu").removeClass("menu--scrolled");
   }
 });
 
@@ -208,12 +208,12 @@ $(document).on("click", ".js-discover-link", function () {
 });
 
 $(document).ready(function () {
-  heroSliderResize();
+  picSliderResize();
 });
 
-$(window).on("resize", heroSliderResize);
+$(window).on("resize", picSliderResize);
 
-function heroSliderResize() {
+function picSliderResize() {
   var heighestImgHeight = 0;
   var picSliderImgs = $($picSlider).find("img");
 

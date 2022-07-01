@@ -8,6 +8,10 @@
     }
   }
 
+  &__logo {
+    width: rem(125);
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;

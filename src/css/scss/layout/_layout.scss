@@ -29,6 +29,7 @@
 
   & .desktop-menu__navbar {
     background-color: getColor(neutrals-white);
+    border-bottom: 1px solid rgba(197, 197, 197, 0.25);
   }
 
   & .desktop-menu__links-profile {
