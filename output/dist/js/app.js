@@ -193,45 +193,47 @@ var $blogSlider = $(".js-blog-slider");
 var $productsSlider = $(".js-product-slider");
 var $introSlider = $(".js-intro-slider");
 
+var picSliderOptions = {
+  infinite: false,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  mobileFirst: true,
+  arrows: false,
+  dots: false,
+  responsive: [
+    {
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+      },
+    },
+  ],
+};
+
 $(function () {
-  $picSlider.slick({
-    infinite: false,
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    mobileFirst: true,
-    arrows: false,
-    dots: false,
-    responsive: [
-      {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-          dots: false,
-        },
-      },
-    ],
-  });
+  $picSlider.slick(picSliderOptions);
 
   $blogSlider.slick({
     infinite: false,
@@ -394,3 +396,25 @@ $(document).on("click", ".js-discover-link", function () {
     );
   }
 });
+
+$(document).ready(function () {
+  heroSliderResize();
+});
+
+$(window).on("resize", heroSliderResize);
+
+function heroSliderResize() {
+  var heighestImgHeight = 0;
+  var picSliderImgs = $($picSlider).find("img");
+
+  $(picSliderImgs).each(function (i, e) {
+    heighestImgHeight =
+      heighestImgHeight < e.height ? e.height : heighestImgHeight;
+  });
+
+  var picSliderVideo = $($picSlider).find(".video");
+
+  $(picSliderVideo).css("height", heighestImgHeight);
+  $($picSlider).slick("unslick");
+  $($picSlider).slick(picSliderOptions);
+}
