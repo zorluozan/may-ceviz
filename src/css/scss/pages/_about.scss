@@ -6,6 +6,15 @@
       padding: rem(72) rem(112);
     }
 
+    &-title {
+      @include setFont(20px, bold, #1d2939, 38);
+      margin-bottom: rem(32);
+
+      @include media-breakpoint-up(lg) {
+        @include setFont(28px, bold, #1d2939, 38);
+      }
+    }
+
     &-text {
       text-align: center;
       @include setFont(14px, regular, getColor(neutrals-900), 24);
