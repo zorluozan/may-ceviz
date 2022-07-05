@@ -7,7 +7,10 @@ var pageList = [
   "blog.html",
   "contact.html",
   "contract-menu.html",
+  "cookiepolicy.html",
   "index.html",
+  "kvkk.html",
   "privacypolicy.html",
+  "production.html",
   "sayfalar.html"
 ]

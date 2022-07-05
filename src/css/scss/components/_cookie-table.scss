@@ -1,0 +1,45 @@
+.cookie-table {
+  border: 1px solid #f3f3f3;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  // table-layout: fixed;
+  // margin-left: -55px;
+
+  thead {
+    background-color: #007ac1;
+
+    th {
+      padding: rem(15);
+      text-align: center;
+      @include setFont(20, bold, white);
+      // border: 1px solid #ccc;
+      white-space: nowrap;
+    }
+  }
+
+  tr {
+    border: 1px solid #ececec;
+    // padding: .35em;
+  }
+
+  tbody {
+    tr {
+      background-color: getColor(neutrals-100);
+    }
+  }
+
+  td {
+    padding: rem(20);
+    text-align: center;
+    border: 1px solid getColor(neutrals-400);
+  }
+
+  th,
+  td {
+    &:last-child {
+      text-align: left;
+    }
+  }
+}

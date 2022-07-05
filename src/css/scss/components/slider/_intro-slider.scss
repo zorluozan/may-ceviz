@@ -43,14 +43,14 @@
     & .slick-dots {
       @include absolute() {
         display: flex;
-        left: 90%;
+        left: 75%;
         top: 100%;
-        transform: translate(-90%, -100%);
+        transform: translate(-75%, -100%);
       }
 
       @include media-breakpoint-up(lg) {
-        left: 67%;
-        transform: translate(-67%, -100%);
+        left: 60%;
+        transform: translate(-60%, -100%);
       }
 
       & li {

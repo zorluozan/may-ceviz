@@ -2,6 +2,7 @@ var $picSlider = $(".js-pic-slider");
 var $blogSlider = $(".js-blog-slider");
 var $productsSlider = $(".js-product-slider");
 var $introSlider = $(".js-intro-slider");
+var $kvkkTable = $(".js-kvkk-table");
 
 var picSliderOptions = {
   infinite: false,
@@ -154,6 +155,42 @@ $(function () {
       },
     ],
   });
+
+  if ($kvkkTable.length > 0) {
+    generateTable();
+  }
+
+  $(window).on("resize", function () {
+    if ($kvkkTable.length > 0) {
+      generateTable();
+    }
+  });
+
+  function generateTable() {
+    if ($(window).width() < 992) {
+      var $thead = $kvkkTable.find("thead th");
+      var $tbody = $kvkkTable.find("tbody tr");
+      var captions = [];
+      var contents = [];
+      $thead.each(function (i, cell) {
+        captions.push($(cell).text().trim());
+      });
+
+      $tbody.each(function (i, tr) {
+        var obj = [];
+        $(tr)
+          .find("td")
+          .each(function (y, cell) {
+            var contentDetail = {
+              caption: captions[y],
+              text: $(cell).text().trim(),
+            };
+            obj.push(contentDetail);
+          });
+        contents.push(obj);
+      });
+    }
+  }
 });
 
 $(".js-mobile-menu-btn").click(function () {
@@ -228,3 +265,45 @@ function picSliderResize() {
   $($picSlider).slick("unslick");
   $($picSlider).slick(picSliderOptions);
 }
+
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function showCookieModal() {
+  $(".js-cookie-modal").addClass("active");
+}
+
+function closeCookieModal() {
+  $(".js-cookie-modal").removeClass("active");
+  setCookie("acceptCookies", true, 1);
+}
+
+function checkCookie() {
+  let cModal = getCookie("acceptCookies");
+  if (cModal == "" || cModal == "false") {
+    showCookieModal();
+  } else {
+  }
+}
+
+checkCookie();
