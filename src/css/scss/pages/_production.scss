@@ -26,6 +26,17 @@
         rgba(0, 0, 0, 0) 37.45%
       );
     }
+
+    &-image {
+      height: calc(100vh - 80px - 40px);
+      min-height: 500px;
+      max-height: 1000px;
+      object-fit: cover;
+
+      @include media-breakpoint-up(xlg) {
+        object-position: center bottom;
+      }
+    }
   }
 
   &__heading {
@@ -69,35 +80,58 @@
       }
     }
 
-    & .video__wrapper {
+    .video__wrapper {
       width: 100%;
       height: rem(400);
+      border-radius: rem(16);
       overflow: hidden;
+      padding: 0 rem(15);
 
-      @include media-breakpoint-up(lg) {
-        max-width: rem(600);
-        height: rem(546);
+      @include media-breakpoint-up(md) {
+        padding: 0;
       }
 
-      & .video {
-        width: inherit;
-        height: inherit;
+      @include media-breakpoint-up(lg) {
+        padding-right: rem(15);
+        padding-left: 0;
+        height: rem(540);
+      }
 
+      @include media-breakpoint-up(xlg) {
+        padding-right: rem(30);
+        padding-left: 0;
+        height: rem(470);
+      }
+
+      &--right {
         @include media-breakpoint-up(lg) {
-          object-fit: cover;
+          padding-left: rem(15);
+          padding-right: 0;
         }
+
+        @include media-breakpoint-up(xlg) {
+          padding-left: rem(30);
+          padding-right: 0;
+        }
+      }
+
+      .video {
+        width: 100%;
+        height: 100%;
+        border-radius: rem(16);
+        object-fit: cover;
       }
     }
 
     &--1 {
       @include media-breakpoint-up(lg) {
-        margin-bottom: rem(96);
+        margin-bottom: rem(120);
       }
     }
 
     &--2 {
       @include media-breakpoint-up(lg) {
-        margin-bottom: rem(96);
+        margin-bottom: rem(120);
       }
     }
 
@@ -117,10 +151,29 @@
 
     & h4 {
       @include setFont(20px, bold, #1d2939, 38);
+
+      @include media-breakpoint-up(xl) {
+        @include setFont(24px, bold, #1d2939, 32);
+        margin-bottom: rem(20);
+      }
     }
 
     & p {
       @include setFont(14px, regular, rgba(37, 37, 37, 1), 24);
+
+      @include media-breakpoint-up(xl) {
+        @include setFont(16px, regular, rgba(37, 37, 37, 1), 24);
+      }
+    }
+  }
+
+  &-text {
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+
+      @include media-breakpoint-up(xl) {
+        margin-bottom: rem(40);
+      }
     }
   }
 }

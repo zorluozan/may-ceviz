@@ -38,7 +38,7 @@
       @include setFont(14px, regular, getColor(neutrals-800), 22);
 
       @include media-breakpoint-up(lg) {
-        @include setFont(18px, regular, getColor(neutrals-white), 28);
+        @include setFont(21px, regular, getColor(neutrals-white), 28);
       }
     }
   }

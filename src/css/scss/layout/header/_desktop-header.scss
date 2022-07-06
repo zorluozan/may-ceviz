@@ -54,7 +54,7 @@
   &__link {
     display: flex;
     align-items: center;
-    @include setFont(15px, medium, rgba(255, 255, 255, 1), 24);
+    @include setFont(17px, medium, rgba(255, 255, 255, 1), 24);
 
     & .downarrow {
       margin-left: rem(6);
