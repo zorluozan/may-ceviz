@@ -201,6 +201,7 @@ var picSliderOptions = {
   slidesToScroll: 1,
   mobileFirst: true,
   arrows: false,
+  autoplay: true,
   dots: false,
   responsive: [
     {
@@ -313,6 +314,7 @@ $(function () {
   $introSlider.slick({
     infinite: false,
     speed: 300,
+    autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     mobileFirst: true,
@@ -381,6 +383,18 @@ $(function () {
       });
     }
   }
+
+  $("#video").on("play", function (e) {
+    e.preventDefault();
+    $(".js-pic-slider").slick("slickPause");
+  });
+
+  $("#video").on("ended", function (e) {
+    e.preventDefault();
+    $(".js-pic-slider").slick("slickPlay");
+    var slideno = $("#next-slide").data("slide");
+    $(".js-pic-slider").slick("slickGoTo", slideno - 1);
+  });
 });
 
 $(".js-mobile-menu-btn").click(function () {

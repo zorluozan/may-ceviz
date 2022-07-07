@@ -8,22 +8,48 @@
                         <div class="pic-slider__item">
                             <div class="video-container">
                                 <video src="/dist/media/img/slider/pic/dronevideo.m4v" type="video/m4v" class="video"
-                                    muted autoplay loop>
+                                    id="video" muted autoplay controls>
                                 </video>
+                            </div>
+
+                            <div class="pic-slider__random">
+                                <h2 class="pic-slider__random-title">El Değmeden,</h2>
+                                <h3 class="pic-slider__random-innertitle">Bahçeden Sofranıza</h3>
+                                <p class="pic-slider__random-text">
+                                    Türkiye’ de ilk olarak Mekanik Hasat yaparak, el değmeden üretim yapan firma.
+                                </p>
+                                <div class="pic-slider__random-logos">
+                                    <img src="/dist/media/img/slider/pic/turkey.png" alt="Turkey"
+                                        class="img-fluid mr-4">
+                                    <img src="/dist/media/img/slider/pic/ıyıtarım.png" alt="İyi Tarım"
+                                        class="img-fluid mr-4">
+                                    <img src="/dist/media/img/slider/pic/dernek.png" alt="Dernek" class="img-fluid">
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div>
-                        <div class="pic-slider__item">
-                            <div class="video-container">
-                                <video src="/dist/media/img/slider/pic/mobilvideo2.mp4" type="video/mp4"
-                                    class="video video--mobile" muted autoplay loop>
-                                </video>
-
-                                <video src="/dist/media/img/slider/pic/webvideo2.mp4" type="video/mp4"
-                                    class="video video--desktop" muted autoplay loop>
-                                </video>
+                        <div class="pic-slider__item" data-slide="2" id="next-slide">
+                            <picture>
+                                <source media="(min-width: 768px)"
+                                    srcset="/dist/media/img/slider/pic/picdesktopimg2.png">
+                                <img src="/dist/media/img/slider/pic/picmobileimg2.png" alt="Pic Banner"
+                                    class="img-fluid w-100 pic__slider__item--img">
+                            </picture>
+                            <div class="pic-slider__random">
+                                <h2 class="pic-slider__random-title">El Değmeden,</h2>
+                                <h3 class="pic-slider__random-innertitle">Bahçeden Sofranıza</h3>
+                                <p class="pic-slider__random-text">
+                                    Türkiye’ de ilk olarak Mekanik Hasat yaparak, el değmeden üretim yapan firma.
+                                </p>
+                                <div class="pic-slider__random-logos">
+                                    <img src="/dist/media/img/slider/pic/turkey.png" alt="Turkey"
+                                        class="img-fluid mr-4">
+                                    <img src="/dist/media/img/slider/pic/ıyıtarım.png" alt="İyi Tarım"
+                                        class="img-fluid mr-4">
+                                    <img src="/dist/media/img/slider/pic/dernek.png" alt="Dernek" class="img-fluid">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -46,7 +72,8 @@
                                     <img src="/dist/media/img/slider/pic/turkey.png" alt="Turkey"
                                         class="img-fluid mr-4">
                                     <img src="/dist/media/img/slider/pic/ıyıtarım.png" alt="İyi Tarım"
-                                        class="img-fluid">
+                                        class="img-fluid mr-4">
+                                    <img src="/dist/media/img/slider/pic/dernek.png" alt="Dernek" class="img-fluid">
                                 </div>
                             </div>
                         </div>

@@ -247,7 +247,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main">
         <section class="pic">
             <div class="container-fluid p-0">
                 <div class="row no-gutters">
@@ -257,20 +257,42 @@
                             <div>
                                 <div class="pic-slider__item">
                                     <div class="video-container">
-                                        <video src="/dist/media/img/slider/pic/dronevideo.m4v" type="video/m4v" class="video" muted autoplay loop>
+                                        <video src="/dist/media/img/slider/pic/dronevideo.m4v" type="video/m4v" class="video" id="video" muted autoplay controls>
                                         </video>
+                                    </div>
+
+                                    <div class="pic-slider__random">
+                                        <h2 class="pic-slider__random-title">El Değmeden,</h2>
+                                        <h3 class="pic-slider__random-innertitle">Bahçeden Sofranıza</h3>
+                                        <p class="pic-slider__random-text">
+                                            Türkiye’ de ilk olarak Mekanik Hasat yaparak, el değmeden üretim yapan firma.
+                                        </p>
+                                        <div class="pic-slider__random-logos">
+                                            <img src="/dist/media/img/slider/pic/turkey.png" alt="Turkey" class="img-fluid mr-4">
+                                            <img src="/dist/media/img/slider/pic/ıyıtarım.png" alt="İyi Tarım" class="img-fluid mr-4">
+                                            <img src="/dist/media/img/slider/pic/dernek.png" alt="Dernek" class="img-fluid">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div>
-                                <div class="pic-slider__item">
-                                    <div class="video-container">
-                                        <video src="/dist/media/img/slider/pic/mobilvideo2.mp4" type="video/mp4" class="video video--mobile" muted autoplay loop>
-                                        </video>
-
-                                        <video src="/dist/media/img/slider/pic/webvideo2.mp4" type="video/mp4" class="video video--desktop" muted autoplay loop>
-                                        </video>
+                                <div class="pic-slider__item" data-slide="2" id="next-slide">
+                                    <picture>
+                                        <source media="(min-width: 768px)" srcset="/dist/media/img/slider/pic/picdesktopimg2.png">
+                                        <img src="/dist/media/img/slider/pic/picmobileimg2.png" alt="Pic Banner" class="img-fluid w-100 pic__slider__item--img">
+                                    </picture>
+                                    <div class="pic-slider__random">
+                                        <h2 class="pic-slider__random-title">El Değmeden,</h2>
+                                        <h3 class="pic-slider__random-innertitle">Bahçeden Sofranıza</h3>
+                                        <p class="pic-slider__random-text">
+                                            Türkiye’ de ilk olarak Mekanik Hasat yaparak, el değmeden üretim yapan firma.
+                                        </p>
+                                        <div class="pic-slider__random-logos">
+                                            <img src="/dist/media/img/slider/pic/turkey.png" alt="Turkey" class="img-fluid mr-4">
+                                            <img src="/dist/media/img/slider/pic/ıyıtarım.png" alt="İyi Tarım" class="img-fluid mr-4">
+                                            <img src="/dist/media/img/slider/pic/dernek.png" alt="Dernek" class="img-fluid">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -289,7 +311,8 @@
                                         </p>
                                         <div class="pic-slider__random-logos">
                                             <img src="/dist/media/img/slider/pic/turkey.png" alt="Turkey" class="img-fluid mr-4">
-                                            <img src="/dist/media/img/slider/pic/ıyıtarım.png" alt="İyi Tarım" class="img-fluid">
+                                            <img src="/dist/media/img/slider/pic/ıyıtarım.png" alt="İyi Tarım" class="img-fluid mr-4">
+                                            <img src="/dist/media/img/slider/pic/dernek.png" alt="Dernek" class="img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -372,9 +395,7 @@
                                             <span>Özel Çuvalında</span>
                                         </div>
                                         <p class="products-wrapper__content-name">Chandler Kabuklu Ceviz</p>
-                                        <p class="products-wrapper__content-amount">1 KG - 35.00 <svg width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M9.42188 6.61133L4.88867 8.19043V14.6357C6.64323 14.6357 7.97168 14.1094 8.87402 13.0566C9.78353 12.0039 10.2383 10.4176 10.2383 8.29785H12.1289C12.1289 9.99512 11.8353 11.4453 11.248 12.6484C10.668 13.8516 9.8444 14.7467 8.77734 15.334C7.71745 15.9212 6.44987 16.2148 4.97461 16.2148C4.14388 16.2148 3.48503 16.1432 2.99805 16V8.82422L0.645508 9.64062V8.21191L2.99805 7.41699V5.67676L0.645508 6.47168V5.04297L2.99805 4.24805V0.294922H4.88867V3.59277L9.42188 2.03516V3.46387L4.88867 5.02148V6.76172L9.42188 5.19336V6.61133Z" fill="white" />
-                                            </svg></p>
+                                        <p class="products-wrapper__content-amount">1 KG</p>
                                     </div>
 
                                 </div>
@@ -395,9 +416,7 @@
                                             <span>Özel Çuvalında</span>
                                         </div>
                                         <p class="products-wrapper__content-name">Fernor Kabuklu Ceviz</p>
-                                        <p class="products-wrapper__content-amount">1 KG - 40.00 <svg width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M9.42188 6.61133L4.88867 8.19043V14.6357C6.64323 14.6357 7.97168 14.1094 8.87402 13.0566C9.78353 12.0039 10.2383 10.4176 10.2383 8.29785H12.1289C12.1289 9.99512 11.8353 11.4453 11.248 12.6484C10.668 13.8516 9.8444 14.7467 8.77734 15.334C7.71745 15.9212 6.44987 16.2148 4.97461 16.2148C4.14388 16.2148 3.48503 16.1432 2.99805 16V8.82422L0.645508 9.64062V8.21191L2.99805 7.41699V5.67676L0.645508 6.47168V5.04297L2.99805 4.24805V0.294922H4.88867V3.59277L9.42188 2.03516V3.46387L4.88867 5.02148V6.76172L9.42188 5.19336V6.61133Z" fill="white" />
-                                            </svg></p>
+                                        <p class="products-wrapper__content-amount">1 KG</p>
                                     </div>
 
                                 </div>
@@ -500,7 +519,7 @@
                 <div class="row no-gutters">
                     <div class="col-12">
                         <div class="product-heading">
-                            <p class="product-heading__title">Ürünlerimiz</p>
+                            <p class="product-heading__title">Sağlıklı cevizler bir tık uzağınızda</p>
                             <p class="product-heading__innertitle">Ürün Çeşitleri</p>
                         </div>
                     </div>
@@ -756,6 +775,7 @@
                                         <a class="dropdown-item" href="#">KULLANIM KOŞULLARI</a>
                                         <a class="dropdown-item" href="/cookiepolicy.html">ÇEREZ POLİTİKASI</a>
                                         <a class="dropdown-item" href="/kvkk.html">MÜŞTERİ AYDINLATMA</a>
+                                        <a class="dropdown-item" href="#">KALİTE POLİTİKASI</a>
                                     </div>
                                 </div>
                             </li>
@@ -763,26 +783,26 @@
 
                         <div class="footer__contact">
                             <div class="footer__contact__wrapper">
-                                <div class="footer__contact-item mr-3">
+                                <div class="footer__contact-item">
                                     <img src="/dist/media/img/footer/phone.png" alt="Phone">
                                     <div class="footer__contact-info">
                                         <span class="contact-text">BİZE ULAŞIN</span>
                                         <a href="#" class="contact-number">
-                                            0212 595 20 00
+                                            0224 351 45 00
                                         </a>
 
                                     </div>
                                 </div>
 
-                                <div class="footer__contact-item">
-                                    <img src="/dist/media/img/footer/whatsapp.png" alt="Whatsapp">
-                                    <div class="footer__contact-info">
-                                        <span class="contact-text">WHATSAPP</span>
-                                        <a href="#" class="contact-number">
-                                            0212 595 20 00
-                                        </a>
-                                    </div>
+                                <!-- <div class="footer__contact-item">
+                                <img src="/dist/media/img/footer/whatsapp.png" alt="Whatsapp">
+                                <div class="footer__contact-info">
+                                    <span class="contact-text">WHATSAPP</span>
+                                    <a href="#" class="contact-number">
+                                        0212 595 20 00
+                                    </a>
                                 </div>
+                            </div> -->
                             </div>
 
                             <div class="footer__imgwrapper">
@@ -844,9 +864,6 @@
                             <li class="footer__payments-item">
                                 <img src="/dist/media/img/footer/mastercard.png" alt="MasterCard">
 
-                            </li>
-                            <li class="footer__payments-item">
-                                <img src="/dist/media/img/footer/troy.png" alt="Troy">
                             </li>
                         </ul>
                     </div>

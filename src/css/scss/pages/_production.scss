@@ -1,6 +1,5 @@
 .p-hero {
   position: relative;
-  padding-top: rem(80);
   & .plusicon__wrapper {
     @include absolute() {
       background-color: rgba(255, 255, 255, 0.4);
@@ -160,6 +159,10 @@
 
     & p {
       @include setFont(14px, regular, rgba(37, 37, 37, 1), 24);
+
+      @include media-breakpoint-up(md) {
+        text-align: justify;
+      }
 
       @include media-breakpoint-up(xl) {
         @include setFont(16px, regular, rgba(37, 37, 37, 1), 24);

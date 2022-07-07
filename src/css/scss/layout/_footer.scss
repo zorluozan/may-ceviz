@@ -119,7 +119,7 @@
 
     @include media-breakpoint-up(xl) {
       margin-top: 0;
-      align-items: flex-start;
+      align-items: flex-end;
     }
 
     &__wrapper {

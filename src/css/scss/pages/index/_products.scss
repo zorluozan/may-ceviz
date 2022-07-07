@@ -110,6 +110,11 @@
         margin: rem(12) 0 rem(5) 0;
 
         @include media-breakpoint-up(lg) {
+          @include setFont(22px, semibold, getColor(neutrals-white), 26);
+          margin: rem(18) 0 rem(9) 0;
+        }
+
+        @include media-breakpoint-up(xl) {
           @include setFont(28px, semibold, getColor(neutrals-white), 26);
           margin: rem(18) 0 rem(9) 0;
         }
@@ -126,7 +131,12 @@
             height: auto;
           }
         }
+
         @include media-breakpoint-up(lg) {
+          @include setFont(18px, semibold, getColor(neutrals-white), 26);
+        }
+
+        @include media-breakpoint-up(xl) {
           @include setFont(22px, semibold, getColor(neutrals-white), 26);
         }
       }
@@ -137,17 +147,23 @@
     @include absolute() {
       background-color: rgba(255, 255, 255, 0.4);
       border-radius: 50%;
-      top: 25%;
-      left: 40%;
-      transform: translate(-25%, -10%);
+      bottom: 12%;
+      right: 10%;
+      transform: translate(-10%, -12%);
       padding: rem(12);
       z-index: 2;
     }
 
     @include media-breakpoint-up(lg) {
-      top: 30%;
-      left: 40%;
-      transform: translate(-40%, -30%);
+      bottom: 25%;
+      right: 10%;
+      transform: translate(-10%, -25%);
+    }
+
+    @include media-breakpoint-up(xl) {
+      bottom: 20%;
+      right: 10%;
+      transform: translate(-10%, -20%);
     }
   }
 
