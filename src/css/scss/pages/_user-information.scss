@@ -1,0 +1,74 @@
+.user-info {
+  &__wrapper {
+    @include media-breakpoint-up(lg) {
+      padding: rem(90) 0;
+    }
+  }
+
+  & .profile-menu {
+    padding-top: 0;
+  }
+
+  &__body {
+    padding: rem(32) 0 rem(16) 0;
+
+    @include media-breakpoint-up(lg) {
+      padding: rem(32) 0;
+    }
+
+    & .btn-back {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__header {
+    & h2 {
+      @include setFont(20px, semibold, getColor(neutrals-black), 32);
+      margin-bottom: rem(16);
+    }
+
+    & p {
+      @include setFont(14px, light, rgba(0, 0, 0, 1), 20);
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__form {
+    & .form-group {
+      margin-bottom: rem(20);
+      @include media-breakpoint-up(lg) {
+        margin-bottom: rem(24);
+      }
+    }
+
+    & .form-group label {
+      @include setFont(14px, medium, getColor(neutrals-700), 20);
+    }
+
+    & .form-group input {
+      border-radius: rem(8);
+      border: 1px solid getColor(neutrals-300);
+      box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+      padding: rem(12) rem(16);
+      height: rem(48);
+
+      @include media-breakpoint-up(lg) {
+        border-radius: rem(8);
+        height: rem(48);
+      }
+
+      &::placeholder {
+        @include setFont(16px, regular, getColor(neutrals-800), 24);
+      }
+    }
+
+    & .form-group p.error {
+      color: #d0021b;
+      margin-top: rem(8);
+    }
+
+    & .btn-update {
+      margin-top: rem(12);
+    }
+  }
+}

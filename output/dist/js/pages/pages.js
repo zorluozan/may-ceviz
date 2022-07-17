@@ -10,7 +10,10 @@ var pageList = [
   "cookiepolicy.html",
   "index.html",
   "kvkk.html",
+  "passwordchange.html",
   "privacypolicy.html",
   "production.html",
-  "sayfalar.html"
+  "profile-menu.html",
+  "sayfalar.html",
+  "userinformation.html"
 ]

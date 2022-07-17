@@ -1,8 +1,8 @@
 $(function () {
   initMask();
-  formValidate();
+  formContactValidate();
 });
-function formValidate() {
+function formContactValidate() {
   $("form#contactForm").validate({
     ignore: [],
     rules: {
@@ -28,12 +28,11 @@ function formValidate() {
         minlength: 1,
       },
     },
-    messages: getMessages(),
+    messages: getContactMessages(),
 
     errorElement: "p",
     errorPlacement: function (error, element) {
       var placement = $(element).parent().find(".error-area");
-
       if (placement.length) {
         $(".error-area").append(error);
       } else {
@@ -62,7 +61,7 @@ function initMask() {
     }
   });
 }
-function getMessages() {
+function getContactMessages() {
   var en = {
     name: "Please enter your firstname",
     surname: "Please enter your lastname",

@@ -1,10 +1,5 @@
 .blogdetail-hero {
-  padding-top: rem(84);
   position: relative;
-
-  @include media-breakpoint-up(lg) {
-    padding-top: rem(80);
-  }
 
   &__slider {
     position: relative;
