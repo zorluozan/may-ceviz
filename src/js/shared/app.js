@@ -1,5 +1,6 @@
 var $picSlider = $(".js-pic-slider");
 var $blogSlider = $(".js-blog-slider");
+var $blogDetailSlider = $(".js-blogdetail-slider");
 var $productsSlider = $(".js-product-slider");
 var $introSlider = $(".js-intro-slider");
 var $kvkkTable = $(".js-kvkk-table");
@@ -48,6 +49,41 @@ $(function () {
   $picSlider.slick(picSliderOptions);
 
   $blogSlider.slick({
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1.25,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+    ],
+  });
+
+  $blogDetailSlider.slick({
     infinite: false,
     speed: 300,
     slidesToShow: 1.25,
