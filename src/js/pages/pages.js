@@ -14,6 +14,7 @@ var pageList = [
   "privacypolicy.html",
   "production.html",
   "profile-menu.html",
+  "qualitypolicy.html",
   "sayfalar.html",
   "userinformation.html"
 ]

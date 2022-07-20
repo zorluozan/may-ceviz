@@ -1,0 +1,66 @@
+.products-popup {
+  position: relative;
+
+  &__wrapper {
+    padding: rem(40) 0;
+  }
+
+  &__imgwrapper {
+    border: 1px solid #eeeeee;
+    border-radius: rem(16);
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__content {
+    @include absolute() {
+      top: 70%;
+      left: 15%;
+      transform: translate(-15%, -70%);
+      z-index: 2;
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include absolute() {
+        top: 75%;
+        left: 15%;
+        transform: translate(-15%, -75%);
+        z-index: 2;
+      }
+    }
+
+    &-text {
+      background-color: #a4904c;
+      padding: rem(2) rem(20);
+      border-radius: rem(14) 0;
+      width: fit-content;
+
+      @include media-breakpoint-up(lg) {
+        border-radius: rem(24) 0;
+        padding: rem(2) rem(16);
+      }
+
+      & span {
+        @include media-breakpoint-up(lg) {
+          text-align: center;
+          @include setFont(14px, medium, getColor(neutrals-white), 26);
+        }
+      }
+    }
+
+    &-name {
+      @include media-breakpoint-up(lg) {
+        @include setFont(14px, medium, getColor(neutrals-black), 24);
+        margin-top: rem(16);
+      }
+
+      @include media-breakpoint-up(xl) {
+        @include setFont(18px, medium, getColor(neutrals-black), 28);
+        margin-top: rem(16);
+      }
+    }
+  }
+}

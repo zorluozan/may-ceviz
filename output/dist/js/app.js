@@ -196,13 +196,14 @@ var $introSlider = $(".js-intro-slider");
 var $kvkkTable = $(".js-kvkk-table");
 
 var picSliderOptions = {
-  infinite: false,
+  infinite: true,
   speed: 300,
   slidesToShow: 1,
   slidesToScroll: 1,
   mobileFirst: true,
   arrows: false,
   autoplay: true,
+  autoplaySpeed: 15000,
   dots: false,
   responsive: [
     {
@@ -420,16 +421,27 @@ $(function () {
     }
   }
 
-  $("#video").on("play", function (e) {
-    e.preventDefault();
-    $(".js-pic-slider").slick("slickPause");
-  });
+  // $("#video").on("play", function (e) {
+  //   e.preventDefault();
+  //   $(".js-pic-slider").slick("slickPause");
+  // });
 
-  $("#video").on("ended", function (e) {
+  // $("#video").on("ended", function (e) {
+  //   e.preventDefault();
+  //   $(".js-pic-slider").slick("slickPlay");
+  //   var slideno = $("#next-slide").data("slide");
+  //   $(".js-pic-slider").slick("slickGoTo", slideno - 1);
+  // });
+
+  $(document).on("click", ".js-accordion-trigger", function (e) {
     e.preventDefault();
-    $(".js-pic-slider").slick("slickPlay");
-    var slideno = $("#next-slide").data("slide");
-    $(".js-pic-slider").slick("slickGoTo", slideno - 1);
+    var $el = $(e.target).parents(".accordion");
+    if ($el.hasClass("active")) {
+      $el.removeClass("active");
+    } else {
+      $(".accordion").removeClass("active");
+      $el.addClass("active");
+    }
   });
 });
 
@@ -466,23 +478,23 @@ $(window).scroll(function () {
   }
 });
 
-$(document).on("click", ".js-discover-link", function () {
-  if ($(window).width() < 992) {
-    $("html,body").animate(
-      {
-        scrollTop: $(this).parents("section").next().offset().top - 80,
-      },
-      "slow"
-    );
-  } else {
-    $("html,body").animate(
-      {
-        scrollTop: $(this).parents("section").next().offset().top - 80,
-      },
-      "slow"
-    );
-  }
-});
+// $(document).on("click", ".js-discover-link", function () {
+//   if ($(window).width() < 992) {
+//     $("html,body").animate(
+//       {
+//         scrollTop: $(this).parents("section").next().offset().top - 80,
+//       },
+//       "slow"
+//     );
+//   } else {
+//     $("html,body").animate(
+//       {
+//         scrollTop: $(this).parents("section").next().offset().top - 80,
+//       },
+//       "slow"
+//     );
+//   }
+// });
 
 $(document).ready(function () {
   picSliderResize();
