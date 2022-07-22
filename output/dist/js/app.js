@@ -192,6 +192,7 @@ var $picSlider = $(".js-pic-slider");
 var $blogSlider = $(".js-blog-slider");
 var $blogDetailSlider = $(".js-blogdetail-slider");
 var $productsSlider = $(".js-product-slider");
+var $productDetailSlider = $(".js-product-detail-slider");
 var $introSlider = $(".js-intro-slider");
 var $kvkkTable = $(".js-kvkk-table");
 
@@ -343,6 +344,49 @@ $(function () {
           slidesToShow: 2,
           slidesToScroll: 1,
           arrows: false,
+        },
+      },
+    ],
+  });
+
+  $productDetailSlider.slick({
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    arrows: true,
+    dots: true,
+    prevArrow:
+      '<button class="slick-arrow slick-prev"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 2.26318L5 8.26318L11 14.2632" stroke="#253146" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+    nextArrow:
+      '<button class="slick-arrow slick-next"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.26318L11 8.26318L5 14.2632" stroke="#253146" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: true,
         },
       },
     ],
@@ -559,3 +603,33 @@ function checkCookie() {
 }
 
 checkCookie();
+
+$(".js-btn-plus").click(function () {
+  let newAmount = 1;
+  $(".js-amount")[0].value++;
+  newAmount = $(".js-amount")[0].value;
+  let calculatedPrice =
+    Number($(".js-price").attr("data-price")) * Number(newAmount);
+  let totalPrice =
+    Number($(".js-total").attr("data-total")) * Number(newAmount);
+  $(".js-amount-container").html(newAmount + " Adet");
+  $(".js-total").html(totalPrice.toFixed(2));
+  $(".js-price").html(calculatedPrice.toFixed(2).replace(".", ","));
+});
+
+$(".js-btn-minus").click(function () {
+  let newAmount = 1;
+  $(".js-amount")[0].value--;
+  newAmount = $(".js-amount")[0].value;
+  let calculatedPrice =
+    Number($(".js-price").attr("data-price")) * Number(newAmount);
+  let totalPrice =
+    Number($(".js-total").attr("data-total")) * Number(newAmount);
+  if (newAmount >= 1) {
+    $(".js-amount-container").html(newAmount + " Adet");
+    $(".js-total").html(totalPrice.toFixed(2));
+    $(".js-price").html(calculatedPrice.toFixed(2).replace(".", ","));
+  } else {
+    $(".js-amount")[0].value = 1;
+  }
+});

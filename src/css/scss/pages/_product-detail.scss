@@ -1,0 +1,185 @@
+.features {
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: rem(24) rem(5);
+
+    @include media-breakpoint-up(lg) {
+      padding: rem(24) 0;
+    }
+
+    & span {
+      @include setFont(12px, medium, rgba(82, 82, 82, 1), 14);
+      white-space: nowrap;
+    }
+  }
+
+  &__info {
+    padding: rem(32) 0 0 0;
+
+    @include media-breakpoint-up(lg) {
+      padding: 0;
+    }
+
+    &-title {
+      @include setFont(24px, semibold, rgba(37, 37, 37, 1), 40);
+
+      @include media-breakpoint-up(xl) {
+        @include setFont(32px, semibold, rgba(37, 37, 37, 1), 40);
+        margin-bottom: rem(24);
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    @include setFont(14px, regular, rgba(56, 56, 56, 1), 28);
+
+    @include media-breakpoint-up(lg) {
+      @include setFont(16px, regular, rgba(56, 56, 56, 1), 28);
+    }
+    &::before {
+      content: url("/dist/media/img/product-detail/chandler/leaf.svg");
+      display: inline-block;
+      margin-right: rem(8);
+      margin-top: rem(8);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    padding: rem(16) 0 rem(32) 0;
+
+    & .btn-addbasket {
+      margin-right: rem(16);
+    }
+  }
+
+  &__priceContainer {
+    display: flex;
+    background-color: #fafafa;
+    border: 1px solid #eeeeee;
+    border-radius: rem(16);
+    padding: rem(24) rem(24) rem(24) rem(20);
+  }
+
+  &__prices {
+    display: flex;
+    flex-direction: column;
+    padding-right: rem(20);
+  }
+
+  &__oldprices {
+    display: flex;
+    align-items: center;
+
+    &-oldprice {
+      @include setFont(14px, medium, getColor(neutrals-600), 26);
+
+      @include media-breakpoint-up(lg) {
+        @include setFont(16px, medium, getColor(neutrals-600), 26);
+      }
+      text-decoration-line: line-through;
+      margin: 0 rem(10) 0 0;
+    }
+
+    &-discount {
+      @include setFont(14px, medium, #49b546, 38);
+
+      @include media-breakpoint-up(lg) {
+        @include setFont(16px, medium, #49b546, 38);
+      }
+    }
+  }
+
+  &__newprice {
+    @include setFont(24px, semibold, getColor(neutrals-black), 34);
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(lg) {
+      @include setFont(28px, semibold, getColor(neutrals-black), 38);
+    }
+  }
+
+  &__amountContainer {
+    display: flex;
+    align-items: center;
+    background-color: getColor(neutrals-white);
+    border: 1px solid #eeeeee;
+    border-radius: rem(12);
+    padding: rem(8) rem(16);
+
+    &-amount {
+      margin: 0 rem(8);
+      @include setFont(16px, medium, rgba(0, 0, 0, 1), 24);
+    }
+  }
+
+  &__package {
+    padding-top: rem(32);
+    &-title {
+      @include setFont(16px, medium, rgba(0, 0, 0, 1), 24);
+      margin-bottom: rem(12);
+    }
+    &-wrapper {
+      display: flex;
+
+      & .package {
+        &:not(:last-child) {
+          margin-right: rem(10);
+          @include media-breakpoint-up(lg) {
+            margin-right: rem(16);
+          }
+        }
+
+        & .radio {
+          display: none;
+        }
+
+        & .features-pack {
+          border: 1px solid #eeeeee;
+          border-radius: rem(12);
+          padding: rem(12) rem(24);
+          cursor: pointer;
+
+          &-kg {
+            @include setFont(14px, medium, rgba(56, 56, 56, 1), 21);
+            margin-bottom: 0;
+          }
+
+          &-price {
+            @include setFont(14px, regular, rgba(82, 82, 82, 1), 26);
+            margin-bottom: 0;
+          }
+        }
+
+        & .radio:checked ~ .package__label .features-pack {
+          border: 1.5px solid getColor(primary-green-800);
+        }
+      }
+    }
+  }
+
+  &__delivery {
+    display: flex;
+    padding-top: rem(32);
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 0;
+    }
+
+    &-wrapper {
+      margin-left: rem(12);
+    }
+
+    &-title {
+      @include setFont(16px, regular, rgba(0, 0, 0, 1), 24);
+      margin-bottom: rem(4);
+    }
+
+    &-text {
+      @include setFont(14px, regular, #667085, 20);
+    }
+  }
+}

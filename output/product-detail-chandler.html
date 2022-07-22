@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May Ceviz</title>
+
+    <link type="text/css" rel="stylesheet" href="./dist/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/dist/media/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="/dist/media/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/dist/media/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/dist/media/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/dist/media/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/dist/media/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/dist/media/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/dist/media/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/dist/media/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/dist/media/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="36x36" href="/dist/media/favicon/android-icon-36x36.png">
+    <link rel="icon" type="image/png" sizes="72x72" href="/dist/media/favicon/android-icon-72x72.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/dist/media/favicon/android-icon-96x96.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="/dist/media/favicon/android-icon-144x144.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/dist/media/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/dist/media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/dist/media/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/dist/media/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <header class="header menu--light">
+        <nav class="mobile-menu d-block d-lg-none">
+            <div class="mobile-menu__navbar">
+                <div class="mobile-menu__header js-mobile-menu-header">
+                    <a href="/">
+                        <img src="/dist/media/img/header/maycevlogo.png" alt="MayCev Logo" class="img-fluid mobile-menu__logo">
+                    </a>
+                    <div class="mobile-menu__links">
+                        <a href="#" class="mobile-menu__links-profile">
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.8947 18.8327C17.8947 18.8327 14.3602 15.0329 9.99998 15.0329C5.63983 15.0329 2.10522 18.8327 2.10522 18.8327M15.0087 7.03769C15.0795 9.80038 12.8938 12.0996 10.1267 12.1731C7.35974 12.2466 5.05921 10.0666 4.9884 7.30386C4.91757 4.54118 7.10327 2.24199 9.87033 2.16849C12.6373 2.09499 14.9378 4.27501 15.0087 7.03769Z" stroke="white" stroke-width="1.5" />
+                            </svg>
+                        </a>
+
+                        <a href="#" class="mobile-menu__links-basket">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5 5.36593V4.76593H0.9V5.36593H1.5ZM16.5 5.36593H17.1V4.76593H16.5V5.36593ZM11.8091 7.41139V8.01139H13.0091V7.41139H11.8091ZM4.99091 7.41139V8.01139H6.19091V7.41139H4.99091ZM13.7727 15.675H4.22727V16.875H13.7727V15.675ZM4.22727 15.675C3.05864 15.675 2.1 14.7164 2.1 13.5478H0.9C0.9 15.3791 2.3959 16.875 4.22727 16.875V15.675ZM2.1 13.5478V5.36593H0.9V13.5478H2.1ZM1.5 5.96593H16.5V4.76593H1.5V5.96593ZM15.9 5.36593V13.5478H17.1V5.36593H15.9ZM15.9 13.5478C15.9 14.7164 14.9414 15.675 13.7727 15.675V16.875C15.6041 16.875 17.1 15.3791 17.1 13.5478H15.9ZM13.0091 7.41139V4.68412H11.8091V7.41139H13.0091ZM13.0091 4.68412C13.0091 2.47774 11.2064 0.675024 9 0.675024V1.87502C10.5436 1.87502 11.8091 3.14049 11.8091 4.68412H13.0091ZM9 0.675024C6.79363 0.675024 4.99091 2.47774 4.99091 4.68412H6.19091C6.19091 3.14049 7.45637 1.87502 9 1.87502V0.675024ZM4.99091 4.68412V7.41139H6.19091V4.68412H4.99091Z" fill="#ffffff" />
+                            </svg>
+                        </a>
+
+                        <a href="javascript:;" class="mobile-menu__icons js-mobile-menu-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-menu__main js-mobile-menu-main">
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__item mobile-menu__dropdown">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="products" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                SİPARİŞ
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="products">
+                                <a class="dropdown-item" href="#">CHANDLER KABUKLU CEVİZ</a>
+                                <a class="dropdown-item" href="#">FERNOR KABUKLU CEVİZ</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="mobile-menu__item">
+                        <a href="/production.html" class="mobile-menu__link">
+                            ÜRETİM
+                        </a>
+                    </li>
+
+                    <li class="mobile-menu__item">
+                        <a href="/about.html" class="mobile-menu__link">
+                            HAKKIMIZDA
+                        </a>
+
+                    </li>
+
+                    <li class="mobile-menu__item">
+                        <a href="/contact.html" class="mobile-menu__link">
+                            İLETİŞİM
+                        </a>
+
+                    </li>
+
+                    <li class="mobile-menu__item">
+                        <a href="/blog.html" class="mobile-menu__link">
+                            BLOG
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="mobile-menu__social">
+                    <ul class="mobile-menu__social__list">
+                        <li class="mobile-menu__social__item">
+                            <a href="#" class="mobile-menu__social__link">
+                                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.3476 26.9997L16.3222 18.8179H13.0999V15.5451H16.3222V13.4997C16.3222 10.4631 18.1737 8.99969 20.8409 8.99969C22.1185 8.99969 23.2166 9.0963 23.5366 9.13948V12.3129L21.6867 12.3138C20.2362 12.3138 19.9553 13.0138 19.9553 14.0411V15.5451H24.1768L22.5656 18.8179H19.9553V26.9997H16.3476Z" fill="#646464" />
+                                </svg>
+
+                            </a>
+                        </li>
+
+                        <li class="mobile-menu__social__item">
+                            <a href="#" class="mobile-menu__social__link">
+                                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9444 9.16524C15.9124 9.12138 16.2217 9.11079 18.6862 9.11079C21.1507 9.11079 21.46 9.12138 22.428 9.16524C23.9026 9.23255 25.198 9.59402 26.2378 10.6338C27.2776 11.6736 27.6391 12.969 27.7064 14.4437C27.7503 15.4116 27.7609 15.7209 27.7609 18.1854C27.7609 20.65 27.7503 20.9593 27.7064 21.9272C27.6391 23.4019 27.2776 24.6973 26.2378 25.7371C25.198 26.7769 23.9026 27.1383 22.428 27.2057C21.46 27.2495 21.1507 27.2601 18.6862 27.2601C16.2217 27.2601 15.9124 27.2495 14.9444 27.2057C13.4698 27.1383 12.1744 26.7769 11.1346 25.7371C10.0948 24.6973 9.73332 23.4019 9.66602 21.9272C9.62216 20.9593 9.61157 20.65 9.61157 18.1854C9.61157 15.7209 9.62216 15.4116 9.66602 14.4437C9.73332 12.969 10.0948 11.6736 11.1346 10.6338C12.1744 9.59402 13.4698 9.23255 14.9444 9.16524ZM22.353 10.7984C21.3963 10.7545 21.109 10.7454 18.686 10.7454C16.2631 10.7454 15.9757 10.7545 15.0191 10.7984C13.9861 10.8452 13.028 11.0524 12.2907 11.7898C11.5534 12.5271 11.3462 13.4852 11.2993 14.5182C11.2554 15.4748 11.2463 15.7622 11.2463 18.1851C11.2463 20.6081 11.2554 20.8954 11.2993 21.852C11.3462 22.885 11.5534 23.8432 12.2907 24.5805C13.028 25.3178 13.9861 25.525 15.0191 25.5719C15.9757 25.6158 16.2631 25.6248 18.686 25.6248C21.109 25.6248 21.3963 25.6158 22.353 25.5719C23.386 25.525 24.3441 25.3178 25.0814 24.5805C25.8187 23.8432 26.0259 22.885 26.0728 21.852C26.1167 20.8954 26.1257 20.6081 26.1257 18.1851C26.1257 15.7622 26.1167 15.4748 26.0728 14.5182C26.0259 13.4852 25.8187 12.5271 25.0814 11.7898C24.3441 11.0524 23.386 10.8452 22.353 10.7984Z" fill="#646464" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8 18.1859C13.8 15.4874 15.9879 13.2996 18.6864 13.2996C21.3849 13.2996 23.5727 15.4874 23.5727 18.1859C23.5727 20.8844 21.3849 23.0723 18.6864 23.0723C15.9879 23.0723 13.8 20.8844 13.8 18.1859ZM15.5139 18.1863C15.5139 19.938 16.9341 21.3583 18.6858 21.3583C20.4375 21.3583 21.8578 19.938 21.8578 18.1863C21.8578 16.4346 20.4375 15.0144 18.6858 15.0144C16.9341 15.0144 15.5139 16.4346 15.5139 18.1863Z" fill="#646464" />
+                                    <path d="M23.573 14.696C24.344 14.696 24.9691 14.071 24.9691 13.2999C24.9691 12.5289 24.344 11.9038 23.573 11.9038C22.8019 11.9038 22.1769 12.5289 22.1769 13.2999C22.1769 14.071 22.8019 14.696 23.573 14.696Z" fill="#646464" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="mobile-menu__social__item">
+                            <a href="#" class="mobile-menu__social__link">
+                                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2075_4846)">
+                                        <path d="M26.8411 9.05475H10.3479C9.89603 9.05475 9.55713 9.39365 9.55713 9.84552V26.4517C9.55713 26.7906 9.89603 27.1295 10.3479 27.1295H26.954C27.4059 27.1295 27.7448 26.7906 27.7448 26.3387V9.84552C27.6318 9.39365 27.2929 9.05475 26.8411 9.05475ZM14.8666 24.4182H12.2683V15.8328H14.9795V24.4182H14.8666ZM13.6239 14.7031C12.7202 14.7031 12.0424 13.9123 12.0424 13.1216C12.0424 12.2178 12.7202 11.54 13.6239 11.54C14.5277 11.54 15.2055 12.2178 15.2055 13.1216C15.0925 13.9123 14.4147 14.7031 13.6239 14.7031ZM24.9206 24.4182H22.2094V20.2385C22.2094 19.2218 22.2094 17.9791 20.8538 17.9791C19.4982 17.9791 19.2723 19.1088 19.2723 20.2385V24.5312H16.5611V15.8328H19.1593V16.9624C19.4982 16.2846 20.402 15.6068 21.6446 15.6068C24.3558 15.6068 24.8077 17.4143 24.8077 19.6736V24.4182H24.9206Z" fill="#646464" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2075_4846">
+                                            <rect width="18.0747" height="18.0747" fill="white" transform="translate(9.5564 9.05554)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="mobile-menu__social__item">
+                            <a href="#" class="mobile-menu__social__link">
+                                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M27.0275 9.65809C29.1362 9.95934 30.04 11.3149 30.3412 13.273C30.6425 15.2311 30.6425 18.093 30.6425 18.093C30.6425 18.093 30.6425 20.9548 30.3412 22.9129C30.04 24.871 29.1362 26.076 27.0275 26.5278C23.7138 27.1303 18.5927 27.1303 18.5927 27.1303C18.5927 27.1303 13.4715 27.1303 10.1578 26.5278C8.04907 26.2266 7.14534 24.871 6.84409 22.9129C6.54285 20.9548 6.54285 18.093 6.54285 18.093C6.54285 18.093 6.54285 15.2311 6.84409 13.273C6.99471 11.3149 8.04907 9.95934 10.1578 9.65809C13.4715 9.0556 18.5927 9.0556 18.5927 9.0556C18.5927 9.0556 23.7138 9.0556 27.0275 9.65809ZM23.1113 18.0925L15.5802 13.5739V22.6112L23.1113 18.0925Z" fill="#646464" />
+                                </svg>
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="desktop-menu d-none d-lg-flex js-desktop-menu">
+            <div class="desktop-menu__navbar js-desktop-navbar">
+                <a href="/">
+                    <img src="/dist/media/img/header/maycevlogo.png" alt="MayCev Logo" class="img-fluid">
+                </a>
+
+                <ul class="desktop-menu__list">
+                    <li class="desktop-menu__item">
+                        <a class="desktop-menu__link js-product-dropdown" href="javascript:;">
+                            SİPARİŞ <svg class="downarrow" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.70832 4.60425L6.49999 8.39591L10.2917 4.60425" stroke="#ffffff" stroke-width="1.51667" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <div class="desktop-menu__dropdown js-desktop-dropdown">
+                            <div class="container">
+                                <div class="row justify-content-xl-center">
+                                    <div class="col-lg-6 col-xl-5">
+                                        <a href="#">
+                                            <div class="products-wrapper products-wrapper--1">
+                                                <img src="/dist/media/img/products/productsimg1.png" alt="Products Image" class="img-fluid products-wrapper__image">
+                                                <div class="products-wrapper__content">
+                                                    <div class="products-wrapper__content-text">
+                                                        <span>Özel Çuvalında</span>
+                                                    </div>
+                                                    <p class="products-wrapper__content-name">Chandler Kabuklu Ceviz</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-5">
+                                        <a href="#">
+                                            <div class="products-wrapper products-wrapper--2">
+                                                <img src="/dist/media/img/products/productsimg2.png" alt="Products Image" class="img-fluid products_wrapper__image products-wrapper__image--2">
+
+                                                <div class="products-wrapper__content">
+                                                    <div class="products-wrapper__content-text">
+                                                        <span>Özel Çuvalında</span>
+                                                    </div>
+                                                    <p class="products-wrapper__content-name">Fernor Kabuklu Ceviz</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="desktop-menu__item">
+                        <a href="/production.html" class="desktop-menu__link">
+                            ÜRETİM
+                        </a>
+                    </li>
+
+                    <li class="desktop-menu__item">
+                        <a href="/about.html" class="desktop-menu__link">
+                            HAKKIMIZDA
+                        </a>
+
+                    </li>
+
+                    <li class="desktop-menu__item">
+                        <a href="/contact.html" class="desktop-menu__link">
+                            İLETİŞİM
+                        </a>
+
+                    </li>
+
+                    <li class="desktop-menu__item">
+                        <a href="/blog.html" class="desktop-menu__link">
+                            BLOG
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="desktop-menu__links">
+                    <a href="#" class="desktop-menu__links-profile">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.8947 18.8327C17.8947 18.8327 14.3602 15.0329 9.99998 15.0329C5.63983 15.0329 2.10522 18.8327 2.10522 18.8327M15.0087 7.03769C15.0795 9.80038 12.8938 12.0996 10.1267 12.1731C7.35974 12.2466 5.05921 10.0666 4.9884 7.30386C4.91757 4.54118 7.10327 2.24199 9.87033 2.16849C12.6373 2.09499 14.9378 4.27501 15.0087 7.03769Z" stroke="#ffffff" stroke-width="1.5" />
+                        </svg>
+                    </a>
+
+                    <a href="#" class="desktop-menu__links-basket">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 5.36593V4.76593H0.9V5.36593H1.5ZM16.5 5.36593H17.1V4.76593H16.5V5.36593ZM11.8091 7.41139V8.01139H13.0091V7.41139H11.8091ZM4.99091 7.41139V8.01139H6.19091V7.41139H4.99091ZM13.7727 15.675H4.22727V16.875H13.7727V15.675ZM4.22727 15.675C3.05864 15.675 2.1 14.7164 2.1 13.5478H0.9C0.9 15.3791 2.3959 16.875 4.22727 16.875V15.675ZM2.1 13.5478V5.36593H0.9V13.5478H2.1ZM1.5 5.96593H16.5V4.76593H1.5V5.96593ZM15.9 5.36593V13.5478H17.1V5.36593H15.9ZM15.9 13.5478C15.9 14.7164 14.9414 15.675 13.7727 15.675V16.875C15.6041 16.875 17.1 15.3791 17.1 13.5478H15.9ZM13.0091 7.41139V4.68412H11.8091V7.41139H13.0091ZM13.0091 4.68412C13.0091 2.47774 11.2064 0.675024 9 0.675024V1.87502C10.5436 1.87502 11.8091 3.14049 11.8091 4.68412H13.0091ZM9 0.675024C6.79363 0.675024 4.99091 2.47774 4.99091 4.68412H6.19091C6.19091 3.14049 7.45637 1.87502 9 1.87502V0.675024ZM4.99091 4.68412V7.41139H6.19091V4.68412H4.99091Z" fill="#ffffff" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="features__link">
+                            <span>ÜRÜNLERİMİZ</span>
+                            <svg class="mx-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.83301 12.3334L10.1663 8.00008L5.83301 3.66675" stroke="#232323" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>CHANDLER KABUKLU CEVİZ</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 p-0 p-lg-1">
+                        <div class="container p-0 p-lg-1">
+                            <div class="row no-gutters">
+                                <div class="col-sm-12 col-md-12 col-lg-6 mr-lg-4">
+                                    <div class="product-detail-slider js-product-detail-slider">
+                                        <div>
+                                            <div class="product-detail-slider__item">
+                                                <img src="/dist/media/img/product-detail/chandler/nutsimg.png" alt="Product Detail Image" class="img-fluid">
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="product-detail-slider__item">
+                                                <img src="/dist/media/img/product-detail/chandler/nutsimg.png" alt="Product Detail Image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-12 col-lg-5">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12 order-1 order-lg-1">
+                                                <div class="features__info">
+                                                    <h4 class="features__info-title">Chandler Kabuklu Ceviz</h4>
+                                                    <ul class="features__list">
+                                                        <li class="features__item">
+                                                            İç beyazlık oranı % 90-100'dür.
+                                                        </li>
+                                                        <li class="features__item">
+                                                            Meyveleri 9-13 gr, meyve içi 6,5 gr, iç oranı
+                                                            %52-55'dir.
+                                                        </li>
+                                                        <li class="features__item">
+                                                            Hastalıklara karşı(antraknoz) dayanıklıdır.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 order-2 order-lg-4">
+                                                <div class="features__buttons">
+                                                    <a href="#" class="btn-addbasket">
+                                                        <svg class="mr-2" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1.66675 5.9622V5.2622H0.966748V5.9622H1.66675ZM18.3334 5.9622H19.0334V5.2622H18.3334V5.9622ZM13.088 8.23493V8.93493H14.488V8.23493H13.088ZM5.5122 8.23493V8.93493H6.9122V8.23493H5.5122ZM15.3031 17.3834H4.69705V18.7834H15.3031V17.3834ZM4.69705 17.3834C3.41698 17.3834 2.36675 16.3332 2.36675 15.0531H0.966748C0.966748 17.1064 2.64379 18.7834 4.69705 18.7834V17.3834ZM2.36675 15.0531V5.9622H0.966748V15.0531H2.36675ZM1.66675 6.6622H18.3334V5.2622H1.66675V6.6622ZM17.6334 5.9622V15.0531H19.0334V5.9622H17.6334ZM17.6334 15.0531C17.6334 16.3332 16.5832 17.3834 15.3031 17.3834V18.7834C17.3564 18.7834 19.0334 17.1064 19.0334 15.0531H17.6334ZM14.488 8.23493V5.20463H13.088V8.23493H14.488ZM14.488 5.20463C14.488 2.73469 12.47 0.716748 10.0001 0.716748V2.11675C11.6968 2.11675 13.088 3.50789 13.088 5.20463H14.488ZM10.0001 0.716748C7.53015 0.716748 5.5122 2.73469 5.5122 5.20463H6.9122C6.9122 3.50789 8.30335 2.11675 10.0001 2.11675V0.716748ZM5.5122 5.20463V8.23493H6.9122V5.20463H5.5122Z" fill="white" />
+                                                        </svg>
+                                                        <span>Sepete Ekle</span>
+                                                    </a>
+
+                                                    <a href="#" class="btn-share">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M4.22217 11.9998V19.7776C4.22217 20.2933 4.42703 20.7879 4.79168 21.1525C5.15634 21.5172 5.65091 21.722 6.16661 21.722H17.8333C18.349 21.722 18.8436 21.5172 19.2082 21.1525C19.5729 20.7879 19.7777 20.2933 19.7777 19.7776V11.9998M15.8888 6.16648L11.9999 2.27759M11.9999 2.27759L8.11106 6.16648M11.9999 2.27759V14.9165" stroke="#475467" stroke-width="1.86667" stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 order-3 order-lg-2">
+                                                <div class="features__priceContainer">
+                                                    <div class="features__prices">
+                                                        <div class="features__oldprices">
+                                                            <p class="features__oldprices-oldprice"><span class="js-total" data-total="55.00">55.00</span>
+                                                                TL</p>
+                                                            <div class="features__oldprices-discount">
+                                                                <span>%11</span>
+                                                                <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M6 6L0.803849 -9.78799e-07L11.1962 -7.02746e-08L6 6Z" fill="#49B546" />
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+
+                                                        <p class="features__newprice">
+                                                            <span class="js-price" data-price="45.00">45,00</span> TL
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="features__amountContainer">
+                                                        <a href="javascript:;" class="btn-minus js-btn-minus">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M5 12H19" stroke="#00671B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </a>
+                                                        <input type="hidden" value="1" class="js-amount">
+                                                        <p class="features__amountContainer-amount js-amount-container">1 Adet
+                                                        </p>
+                                                        <a href="javascript:;" class="btn-plus js-btn-plus">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12 5V19M5 12H19" stroke="#00671B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 order-4 order-lg-3">
+                                                <div class="features__package">
+                                                    <h4 class="features__package-title">Paket Seçin</h4>
+                                                    <div class="features__package-wrapper">
+                                                        <div class="package">
+                                                            <input type="radio" class="radio" id="radio1" name="radio">
+
+                                                            <label class="package__label" for="radio1">
+                                                                <div class="features-pack">
+                                                                    <p class="features-pack-kg"><span>1</span> Kg</p>
+                                                                    <p class="features-pack-price"><span>45,00</span>
+                                                                        TL</p>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="package">
+                                                            <input type="radio" class="radio" id="radio2" name="radio">
+
+                                                            <label class="package__label" for="radio2">
+                                                                <div class="features-pack">
+                                                                    <p class="features-pack-kg"><span>2</span> Kg</p>
+                                                                    <p class="features-pack-price"><span>85,00</span>
+                                                                        TL</p>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="package">
+                                                            <input type="radio" class="radio" id="radio3" name="radio">
+
+                                                            <label class="package__label" for="radio3">
+                                                                <div class="features-pack">
+                                                                    <p class="features-pack-kg"><span>4</span> Kg</p>
+                                                                    <p class="features-pack-price"><span>160,00</span>
+                                                                        TL</p>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 order-5 order-lg-5">
+                                                <div class="features__delivery">
+                                                    <div>
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M12 21C9.61305 21 7.32387 20.0518 5.63604 18.364C3.94821 16.6761 3 14.3869 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12C21 14.3869 20.0518 16.6761 18.364 18.364C16.6761 20.0518 14.3869 21 12 21V21Z" stroke="#49B546" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                                            <path d="M16 10L11 15L8 12" stroke="#49B546" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="features__delivery-wrapper">
+                                                        <p class="features__delivery-title">Ücretsiz Teslimat</p>
+                                                        <p class="features__delivery-text">
+                                                            Siparişiniz seçtiğiniz teslimat adresine ücretsiz bir şekilde teslim
+                                                            edilir.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 p-0">
+                    <nav class="footer__nav">
+                        <ul class="navbar-nav">
+                            <li class="footer__nav-item order-1 order-lg-3">
+                                <div class="footer__dropdown dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="products" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        ÜRÜNLERİMİZ
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="products">
+                                        <a class="dropdown-item" href="#">CHANDLER KABUKLU CEVİZ</a>
+                                        <a class="dropdown-item" href="#">FERNOR KABUKLU CEVİZ</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="footer__nav-item order-2 order-lg-1">
+                                <div class="footer__dropdown dropdown pl-xl-0">
+                                    <a class="nav-link dropdown-toggle" href="#" id="products" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        MÜŞTERİ İLİŞKİLERİ
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="products">
+                                        <a class="dropdown-item" href="/contact.html">BİZE ULAŞIN</a>
+                                        <a class="dropdown-item" href="#">İPTAL & İADE</a>
+                                        <a class="dropdown-item" href="#">TESLİMAT</a>
+                                        <a class="dropdown-item" href="#">SSS</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="footer__nav-item order-3 order-lg-2">
+                                <div class="footer__dropdown dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="products" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        BİLGİ
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="products">
+                                        <a class="dropdown-item" href="#">GÜVENLİK</a>
+                                        <a class="dropdown-item" href="/privacypolicy.html">GİZLİLİK İLKELERİ</a>
+                                        <a class="dropdown-item" href="#">KULLANIM KOŞULLARI</a>
+                                        <a class="dropdown-item" href="/cookiepolicy.html">ÇEREZ POLİTİKASI</a>
+                                        <a class="dropdown-item" href="/kvkk.html">MÜŞTERİ AYDINLATMA</a>
+                                        <a class="dropdown-item" href="/qualitypolicy.html">KALİTE POLİTİKASI</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="footer__contact">
+                            <div class="footer__contact__wrapper">
+                                <div class="footer__contact-item">
+                                    <img src="/dist/media/img/footer/phone.png" alt="Phone">
+                                    <div class="footer__contact-info">
+                                        <span class="contact-text">BİZE ULAŞIN</span>
+                                        <a href="#" class="contact-number">
+                                            0224 351 45 00
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <!-- <div class="footer__contact-item">
+                                <img src="/dist/media/img/footer/whatsapp.png" alt="Whatsapp">
+                                <div class="footer__contact-info">
+                                    <span class="contact-text">WHATSAPP</span>
+                                    <a href="#" class="contact-number">
+                                        0212 595 20 00
+                                    </a>
+                                </div>
+                            </div> -->
+                            </div>
+
+                            <div class="footer__imgwrapper">
+                                <img src="/dist/media/img/footer/turkey.png" alt="Turkey" class="img-fluid footer__imgwrapper--image">
+                                <img src="/dist/media/img/footer/ıyıtarım.png" alt="Iyı Tarım" class="img-fluid footer__imgwrapper--image">
+                                <img src="/dist/media/img/footer/cevızdernek.png" alt="Ceviz Dernek" class="img-fluid">
+                            </div>
+                        </div>
+
+
+
+                    </nav>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 p-0">
+                    <div class="footer__payments">
+                        <ul class="footer__payments-list">
+                            <li class="footer__payments-item">
+                                <img src="/dist/media/img/footer/cardfinans.png" alt="Card Finans">
+
+                            </li>
+                            <li class="footer__payments-item">
+                                <img src="/dist/media/img/footer/axess.png" alt="Axess">
+
+                            </li>
+                            <li class="footer__payments-item">
+                                <img src="/dist/media/img/footer/maximum.png" alt="Maximum">
+
+                            </li>
+                            <li class="footer__payments-item">
+                                <img src="/dist/media/img/footer/paraf.png" alt="Paraf">
+
+                            </li>
+                            <li class="footer__payments-item">
+                                <img src="/dist/media/img/footer/advantage.png" alt="Advantage">
+
+                            </li>
+                        </ul>
+
+                        <ul class="footer__payments-list">
+                            <li class="footer__payments-item">
+                                <img src="/dist/media/img/footer/secure.png" alt="Secure">
+
+                            </li>
+                            <li class="footer__payments-item">
+                                <img src="/dist/media/img/footer/troy.png" alt="Troy">
+
+                            </li>
+                            <li class="footer__payments-item">
+                                <img src="/dist/media/img/footer/vısa.png" alt="Vısa">
+
+                            </li>
+                            <li class="footer__payments-item">
+                                <img src="/dist/media/img/footer/mastercard.png" alt="MasterCard">
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__social">
+            <div class="container">
+                <div class="row flex-column flex-lg-row align-items-lg-center justify-content-lg-between">
+                    <ul class="footer__social-list order-lg-2">
+                        <li class="footer__social-item">
+                            <a href="#" class="footer__social-link">
+                                <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.3476 25.4995L14.3222 17.3177H11.0999V14.045H14.3222V11.9995C14.3222 8.96291 16.1737 7.49951 18.8409 7.49951C20.1185 7.49951 21.2166 7.59611 21.5366 7.6393V10.8127L19.6867 10.8136C18.2362 10.8136 17.9553 11.5136 17.9553 12.5409V14.045H22.1768L20.5656 17.3177H17.9553V25.4995H14.3476Z" fill="white" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="#" class="footer__social-link">
+                                <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9444 7.66529C13.9124 7.62143 14.2217 7.61084 16.6862 7.61084C19.1507 7.61084 19.46 7.62143 20.428 7.66529C21.9026 7.73259 23.198 8.09406 24.2378 9.13387C25.2776 10.1737 25.6391 11.4691 25.7064 12.9437C25.7503 13.9117 25.7609 14.221 25.7609 16.6855C25.7609 19.15 25.7503 19.4593 25.7064 20.4273C25.6391 21.9019 25.2776 23.1973 24.2378 24.2371C23.198 25.2769 21.9026 25.6384 20.428 25.7057C19.46 25.7496 19.1507 25.7601 16.6862 25.7601C14.2217 25.7601 13.9124 25.7496 12.9444 25.7057C11.4698 25.6384 10.1744 25.2769 9.1346 24.2371C8.0948 23.1973 7.73332 21.9019 7.66602 20.4273C7.62216 19.4593 7.61157 19.15 7.61157 16.6855C7.61157 14.221 7.62216 13.9117 7.66602 12.9437C7.73332 11.4691 8.0948 10.1737 9.1346 9.13387C10.1744 8.09406 11.4698 7.73259 12.9444 7.66529ZM20.353 9.2984C19.3963 9.25454 19.109 9.24547 16.686 9.24547C14.2631 9.24547 13.9757 9.25454 13.0191 9.2984C11.9861 9.34529 11.028 9.55249 10.2907 10.2898C9.55336 11.0271 9.34616 11.9853 9.29927 13.0183C9.25541 13.9749 9.24634 14.2622 9.24634 16.6852C9.24634 19.1081 9.25541 19.3955 9.29927 20.3521C9.34616 21.3851 9.55336 22.3432 10.2907 23.0805C11.028 23.8178 11.9861 24.0251 13.0191 24.0719C13.9757 24.1158 14.2631 24.1249 16.686 24.1249C19.109 24.1249 19.3963 24.1158 20.353 24.0719C21.386 24.0251 22.3441 23.8178 23.0814 23.0805C23.8187 22.3432 24.0259 21.3851 24.0728 20.3521C24.1167 19.3955 24.1257 19.1081 24.1257 16.6852C24.1257 14.2622 24.1167 13.9749 24.0728 13.0183C24.0259 11.9853 23.8187 11.0271 23.0814 10.2898C22.3441 9.55249 21.386 9.34529 20.353 9.2984Z" fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8 16.6862C11.8 13.9876 13.9879 11.7998 16.6864 11.7998C19.3849 11.7998 21.5727 13.9876 21.5727 16.6862C21.5727 19.3847 19.3849 21.5725 16.6864 21.5725C13.9879 21.5725 11.8 19.3847 11.8 16.6862ZM13.5139 16.6866C13.5139 18.4383 14.9341 19.8585 16.6858 19.8585C18.4375 19.8585 19.8578 18.4383 19.8578 16.6866C19.8578 14.9349 18.4375 13.5146 16.6858 13.5146C14.9341 13.5146 13.5139 14.9349 13.5139 16.6866Z" fill="white" />
+                                    <path d="M21.573 13.196C22.344 13.196 22.9691 12.571 22.9691 11.7999C22.9691 11.0289 22.344 10.4038 21.573 10.4038C20.8019 10.4038 20.1769 11.0289 20.1769 11.7999C20.1769 12.571 20.8019 13.196 21.573 13.196Z" fill="white" />
+                                </svg>
+
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="#" class="footer__social-link">
+                                <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2201_5809)">
+                                        <path d="M24.8411 7.55469H8.3479C7.89603 7.55469 7.55713 7.89359 7.55713 8.34546V24.9516C7.55713 25.2905 7.89603 25.6294 8.3479 25.6294H24.954C25.4059 25.6294 25.7448 25.2905 25.7448 24.8386V8.34546C25.6318 7.89359 25.2929 7.55469 24.8411 7.55469ZM12.8666 22.9182H10.2683V14.3327H12.9795V22.9182H12.8666ZM11.6239 13.203C10.7202 13.203 10.0424 12.4123 10.0424 11.6215C10.0424 10.7178 10.7202 10.04 11.6239 10.04C12.5277 10.04 13.2055 10.7178 13.2055 11.6215C13.0925 12.4123 12.4147 13.203 11.6239 13.203ZM22.9206 22.9182H20.2094V18.7384C20.2094 17.7217 20.2094 16.4791 18.8538 16.4791C17.4982 16.4791 17.2723 17.6087 17.2723 18.7384V23.0312H14.5611V14.3327H17.1593V15.4624C17.4982 14.7846 18.402 14.1068 19.6446 14.1068C22.3558 14.1068 22.8077 15.9142 22.8077 18.1736V22.9182H22.9206Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2201_5809">
+                                            <rect width="18.0747" height="18.0747" fill="white" transform="translate(7.5564 7.55566)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="#" class="footer__social-link">
+                                <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0275 8.15815C27.1362 8.4594 28.04 9.815 28.3412 11.7731C28.6425 13.7312 28.6425 16.593 28.6425 16.593C28.6425 16.593 28.6425 19.4548 28.3412 21.4129C28.04 23.371 27.1362 24.576 25.0275 25.0279C21.7138 25.6304 16.5927 25.6304 16.5927 25.6304C16.5927 25.6304 11.4715 25.6304 8.15779 25.0279C6.04907 24.7266 5.14534 23.371 4.84409 21.4129C4.54285 19.4548 4.54285 16.593 4.54285 16.593C4.54285 16.593 4.54285 13.7312 4.84409 11.7731C4.99471 9.815 6.04907 8.4594 8.15779 8.15815C11.4715 7.55566 16.5927 7.55566 16.5927 7.55566C16.5927 7.55566 21.7138 7.55566 25.0275 8.15815ZM21.1113 16.5926L13.5802 12.0739V21.1113L21.1113 16.5926Z" fill="white" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="order-lg-1">MayCev 2022, Tüm hakları saklıdır.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cookie-modal js-cookie-modal">
+        <p class="pb-4">
+            İnternet sitemizi ziyaret etmenizle birlikte, mevzuata uygun olarak kişisel verileriniz işlenmektedir.
+            Aydınlatma metnini okumak için <a href=""><u>tıklayınız.</u></a> <u><i>(MAY Ceviz - Kişisel Verilerin
+                    İşlenmesine
+                    Yönelik İnternet Sitesi
+                    Aydınlatma Metni)</i></u>
+        </p>
+
+        <p class="pb-4">
+            MAY Ceviz tarafından internet üzerindeki hareketlerinize özelleştirilmiş pazarlama ve reklamcılık faaliyetleri
+            yürütülmesi ve analizler yapılması adına çerezlerle kişisel verilerinizin işlenmesi açık rızanıza tabidir, açık
+            rızanızı <i>Çerezlerin Tümünü Kabul Edin</i> ile sunabilir, <i>Çerezlerin Tümünü Reddedin</i> ile reddedilebilir
+            ya da <i>Çerez
+                Tercihlerinden</i> seçeneklerinizi kaydedebilirsiniz. Çerezlerle işlenecek olan kişisel verilerinize yönelik
+            aydınlatma metnini okumak için <a href=""><u>tıklayınız.</u></a> <i><u>(MAY Ceviz - Çerezlerle İşlenen
+                    Kişisel
+                    Verilere Yönelik
+                    Aydınlatma
+                    Metni)</u></i>
+        </p>
+
+        <div class="d-flex justify-content-end align-content-end">
+            <div>
+                <a href="" class="btn btn--primary px-3">Çerez
+                    Tercihleri</a>
+            </div>
+            <div>
+                <a href="javascript:;" class="btn btn--primary px-3">Tümünü
+                    reddedin</a>
+            </div>
+            <div>
+                <a href="javascript:;" onclick="closeCookieModal()" class="button--cookie button--outline-secondary js-cookie-modal-btn px-3">Tümünü
+                    kabul edin</a>
+            </div>
+        </div>
+
+        <div>
+
+            <!-- <ul>
+            <li>
+                <a href="javascript:;" onclick="closeCookieModal()" class="btn btn--primary js-cookie-modal-btn">Tümünü
+                    kabul edin</a> -->
+            <!-- <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">Tümünü kabul edin</label><br> -->
+            <!-- </li>
+            <li>
+                <a href="javascript:;" class="btn btn--primary">Tümünü
+                    reddedin</a> -->
+            <!-- <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">Tümünü reddedin</label><br> -->
+            <!-- </li>
+            <li>
+                <a href="" class="btn btn--primary">Çerez
+                    Tercihleri</a> -->
+            <!-- <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                <label for="javascript">Çerez Tercihleri</label> -->
+            <!-- </li>
+        </ul> -->
+
+            <!-- <a href="#" class="cookie-modal__link">Gizlilik Politikası</a> -->
+
+        </div>
+    </div>
+    <script src="/dist/js/app.js"></script>
+    <script src="/dist/js/pages/contact-us.js"></script>
+    <script src="/dist/js/pages/profile-forms.js"></script>
+    <script src="/dist/js/plugins/lazysizes/lazysizes.min.js"></script>
+    <script src="/dist/js/plugins/js.cookie.min.js"></script>
+    <script src="/dist/js/plugins/vanilla-sharing.js"></script>
+</body>
+
+</html>

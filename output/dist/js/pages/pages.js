@@ -12,6 +12,7 @@ var pageList = [
   "kvkk.html",
   "passwordchange.html",
   "privacypolicy.html",
+  "product-detail-chandler.html",
   "production.html",
   "profile-menu.html",
   "qualitypolicy.html",

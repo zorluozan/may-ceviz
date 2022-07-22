@@ -48,3 +48,37 @@
   background-color: getColor(primary-green-800);
   width: 100%;
 }
+
+.btn-addbasket {
+  border: none;
+  border-radius: rem(8);
+  padding: rem(10) rem(24);
+  @include setFont(16px, medium, getColor(neutrals-white), 28);
+  background-color: getColor(primary-green-800);
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-share {
+  border: 1px solid #e4e7ec;
+  border-radius: rem(9);
+  padding: rem(16);
+}
+
+.btn-minus {
+  border: 1px solid #f2f2f2;
+  border-radius: rem(37);
+  width: rem(32);
+  height: rem(32);
+  text-align: center;
+}
+
+.btn-plus {
+  border: 1px solid #f2f2f2;
+  border-radius: rem(37);
+  width: rem(32);
+  height: rem(32);
+  text-align: center;
+}
