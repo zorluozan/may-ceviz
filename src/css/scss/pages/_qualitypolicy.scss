@@ -243,11 +243,11 @@
   }
 
   &.active &__head {
-    color: getColor(blue-500-primary);
+    color: #0d824b;
   }
 
   &.active &__button {
-    color: getColor(blue-500-primary);
+    color: #0d824b;
 
     &:after {
       transform: translateY(-50%) rotate(180deg);
