@@ -24,35 +24,13 @@
 
         @include media-breakpoint-up(md) {
           width: 100%;
-          // object-fit: cover;
-        }
-
-        &--mobile {
-          display: block;
-
-          @include media-breakpoint-up(md) {
-            display: none;
-          }
-        }
-
-        &--desktop {
-          display: none;
-
-          @include media-breakpoint-up(md) {
-            display: block;
-          }
-        }
-      }
-
-      & .video--bg {
-        @include media-breakpoint-up(md) {
           background: linear-gradient(
               0.86deg,
               rgba(0, 0, 0, 0.6) 20.15%,
               rgba(0, 0, 0, 0.267113) 61.81%,
               rgba(0, 0, 0, 0) 88.99%
             ),
-            url("/dist/media/img/slider/pic/videobg.png");
+            url("/dist/media/img/slider/pic/videobgblur.jpg");
           background-size: cover;
           background-repeat: no-repeat;
         }
