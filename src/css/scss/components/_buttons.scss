@@ -82,3 +82,10 @@
   height: rem(32);
   text-align: center;
 }
+
+.btn-see-products {
+  background-color: getColor(primary-green-800);
+  border-radius: rem(6);
+  padding: rem(12) rem(72);
+  @include setFont(16px, semibold, getColor(neutrals-white), 24);
+}

@@ -1,5 +1,8 @@
 .product-detail {
   &-slider {
+    @include media-breakpoint-up(lg) {
+      padding-bottom: rem(96);
+    }
     & .slick-arrow {
       border-radius: rem(46);
       background-color: getColor(neutrals-white);
@@ -93,8 +96,8 @@
         inset: 0;
         background: linear-gradient(
           4.22deg,
-          #000000 -10.09%,
-          rgba(0, 0, 0, 0) 35.55%
+          #000000 -50%,
+          rgba(0, 0, 0, 0) 50%
         );
       }
 

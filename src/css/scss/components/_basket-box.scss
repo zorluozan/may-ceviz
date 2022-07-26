@@ -1,0 +1,15 @@
+.basket-box {
+  border: 1px solid #eeeeee;
+  border-radius: rem(158);
+  padding: rem(32);
+  width: rem(96);
+  height: rem(96);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media-breakpoint-up(lg) {
+    width: rem(104);
+    height: rem(104);
+  }
+}

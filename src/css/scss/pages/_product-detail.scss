@@ -1,4 +1,4 @@
-.features {
+.product-detail {
   &__link {
     display: flex;
     align-items: center;
@@ -67,6 +67,7 @@
   &__prices {
     display: flex;
     flex-direction: column;
+    flex-basis: 50%;
     padding-right: rem(20);
   }
 
@@ -104,7 +105,9 @@
 
   &__amountContainer {
     display: flex;
+    flex-basis: 50%;
     align-items: center;
+    justify-content: space-between;
     background-color: getColor(neutrals-white);
     border: 1px solid #eeeeee;
     border-radius: rem(12);
@@ -113,17 +116,23 @@
     &-amount {
       margin: 0 rem(8);
       @include setFont(16px, medium, rgba(0, 0, 0, 1), 24);
+      white-space: nowrap;
     }
   }
 
   &__package {
-    padding-top: rem(32);
     &-title {
       @include setFont(16px, medium, rgba(0, 0, 0, 1), 24);
       margin-bottom: rem(12);
     }
     &-wrapper {
       display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      @include media-breakpoint-up(md) {
+        justify-content: flex-start;
+      }
 
       & .package {
         &:not(:last-child) {
@@ -137,7 +146,7 @@
           display: none;
         }
 
-        & .features-pack {
+        & .product-detail-pack {
           border: 1px solid #eeeeee;
           border-radius: rem(12);
           padding: rem(12) rem(24);
@@ -154,7 +163,7 @@
           }
         }
 
-        & .radio:checked ~ .package__label .features-pack {
+        & .radio:checked ~ .package__label .product-detail-pack {
           border: 1.5px solid getColor(primary-green-800);
         }
       }
@@ -163,11 +172,6 @@
 
   &__delivery {
     display: flex;
-    padding-top: rem(32);
-
-    @include media-breakpoint-up(lg) {
-      padding-top: 0;
-    }
 
     &-wrapper {
       margin-left: rem(12);

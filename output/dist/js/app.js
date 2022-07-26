@@ -195,16 +195,25 @@ var $productsSlider = $(".js-product-slider");
 var $productDetailSlider = $(".js-product-detail-slider");
 var $introSlider = $(".js-intro-slider");
 var $kvkkTable = $(".js-kvkk-table");
+const $packageBtn = $(".js-package-btn");
+
+function getSlide(sliderHref) {
+  var sliderID = $productDetailSlider
+    .find('[data-slider-id="' + sliderHref + '"]')
+    .data("slick-index");
+  $productDetailSlider.slick("slickGoTo", sliderID);
+}
 
 var picSliderOptions = {
   infinite: true,
-  speed: 300,
   slidesToShow: 1,
   slidesToScroll: 1,
   mobileFirst: true,
   arrows: false,
   autoplay: true,
   autoplaySpeed: 15000,
+  pauseOnFocus: false,
+  pauseOnHover: false,
   dots: false,
   responsive: [
     {
@@ -486,6 +495,13 @@ $(function () {
       $(".accordion").removeClass("active");
       $el.addClass("active");
     }
+  });
+
+  $packageBtn.on("click", function () {
+    // $(".js-package-btn").parent().removeClass("active");
+    // $(this).parent().addClass("active");
+    var slickHref = $(this).data("slider-href");
+    getSlide(slickHref);
   });
 
   picSliderResize();

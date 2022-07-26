@@ -1,0 +1,28 @@
+.empty-basket {
+  padding: rem(32) 0;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    padding: rem(96) 0;
+  }
+
+  &__heading {
+    padding: rem(24) 0 rem(16) 0;
+
+    @include media-breakpoint-up(lg) {
+      padding: rem(24) 0 rem(40) 0;
+    }
+    &-title {
+      @include setFont(20px, bold, #1d2939, 38);
+
+      @include media-breakpoint-up(lg) {
+        @include setFont(28px, bold, #1d2939, 38);
+        margin-bottom: rem(11);
+      }
+    }
+
+    &-text {
+      @include setFont(16px, regular, rgba(37, 37, 37, 1), 24);
+    }
+  }
+}
