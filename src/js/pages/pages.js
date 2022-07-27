@@ -1,5 +1,6 @@
 var pageList = [
   "about.html",
+  "basket-products.html",
   "blog-detail-1.html",
   "blog-detail-2.html",
   "blog-detail-3.html",

@@ -89,3 +89,43 @@
   padding: rem(12) rem(72);
   @include setFont(16px, semibold, getColor(neutrals-white), 24);
 }
+
+.btn-close {
+  background-color: getColor(neutrals-50);
+  border: 0.42px solid #eeeeee;
+  border-radius: rem(16);
+  width: rem(28);
+  height: rem(28);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-up {
+  background-color: #fafafa;
+  border-radius: rem(47);
+  width: rem(28);
+  height: rem(28);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-approve-basket {
+  background-color: getColor(primary-green-800);
+  border-radius: rem(12);
+  padding: rem(12) rem(72);
+  @include setFont(16px, semibold, getColor(neutrals-white), 24);
+  text-align: center;
+}
+
+.btn-next-step {
+  background-color: #00671b;
+  border-radius: rem(12);
+  padding: rem(12) rem(24);
+  @include setFont(16px, semibold, getColor(neutrals-white), 24);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

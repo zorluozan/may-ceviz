@@ -248,25 +248,243 @@
     </header>
 
     <main class="main">
-        <div class="empty-basket">
+        <section class="basket-products">
             <div class="container">
-                <div class="basket-box">
-                    <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.1665 9.53933V8.28933H1.9165V9.53933H3.1665ZM29.8332 9.53933H31.0832V8.28933H29.8332V9.53933ZM21.3104 13.1757V14.4257H23.8104V13.1757H21.3104ZM9.18923 13.1757V14.4257H11.6892V13.1757H9.18923ZM24.9847 27.6833H8.01499V30.1833H24.9847V27.6833ZM8.01499 27.6833C6.03868 27.6833 4.4165 26.0611 4.4165 24.0848H1.9165C1.9165 27.4418 4.65797 30.1833 8.01499 30.1833V27.6833ZM4.4165 24.0848V9.53933H1.9165V24.0848H4.4165ZM3.1665 10.7893H29.8332V8.28933H3.1665V10.7893ZM28.5832 9.53933V24.0848H31.0832V9.53933H28.5832ZM28.5832 24.0848C28.5832 26.0611 26.961 27.6833 24.9847 27.6833V30.1833C28.3417 30.1833 31.0832 27.4418 31.0832 24.0848H28.5832ZM23.8104 13.1757V8.32721H21.3104V13.1757H23.8104ZM23.8104 8.32721C23.8104 4.30352 20.5235 1.0166 16.4998 1.0166V3.5166C19.1428 3.5166 21.3104 5.68423 21.3104 8.32721H23.8104ZM16.4998 1.0166C12.4761 1.0166 9.18923 4.30352 9.18923 8.32721H11.6892C11.6892 5.68423 13.8569 3.5166 16.4998 3.5166V1.0166ZM9.18923 8.32721V13.1757H11.6892V8.32721H9.18923Z" fill="#008523" />
-                    </svg>
+                <div class="basket-products__container">
+                    <div class="row">
+                        <div class="col-12 col-xl-9">
+                            <div class="basket-products__heading">
+                                <div class="basket-products__mybasket">
+                                    <span class="basket-products__mybasket-title">Sepetim</span>
+                                    <p class="basket-products__mybasket-kg">(<span>4</span> kg)</p>
+                                </div>
+                                <a href="#" class="basket-products__empty-link">Sepeti Boşalt</a>
+                            </div>
 
-                </div>
-                <div class="empty-basket__heading">
-                    <h4 class="empty-basket__heading-title">Sepetin Şuan Boş</h4>
-                    <p class="empty-basket__heading-text">MayCev ürünlerini keşfedin,
-                        Şimdi alışverişe başlayın.</p>
-                </div>
-                <div>
-                    <a href="#" class="btn-see-products">Ürünleri Gör</a>
+                            <ul class="basket-products__list">
+                                <li class="basket-products__item">
+                                    <div class="order">
+                                        <div class="order-heading">
+                                            <figure class="order-imgwrapper">
+                                                <img src="/dist/media/img/basket-products/cuval20.png" alt="" class="img-fluid">
+                                            </figure>
+
+                                            <div class="order-product__wrapper">
+                                                <div class="order-product__wrapper-info">
+                                                    <div>
+                                                        <h5 class="order-product__wrapper-info-name">Chandler Kabuklu Ceviz</h5>
+                                                        <p class="order-product__wrapper-info-free">Ücretsiz kargo teslimatı</p>
+                                                    </div>
+
+                                                    <a href="#" class="d-none d-lg-block basket-products__remove-product">Ürünü
+                                                        Kaldır</a>
+                                                </div>
+
+                                                <div class="order-prices d-lg-none">
+                                                    <div class="order-oldprices">
+                                                        <p class="order-oldprices__oldprice"><span class="js-total" data-total="55.00">55.00</span>
+                                                            TL</p>
+                                                        <div class="order-oldprices__discount">
+                                                            <span>%11</span>
+                                                            <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M6 6L0.803849 -9.78799e-07L11.1962 -7.02746e-08L6 6Z" fill="#49B546" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+
+                                                    <p class="order-newprice">
+                                                        <span class="js-price" data-price="45.00">45,00</span> TL
+                                                    </p>
+                                                </div>
+
+                                                <div class="order-wrapper d-none d-lg-flex">
+                                                    <div class="order-prices d-none d-lg-block">
+                                                        <div class="order-oldprices">
+                                                            <p class="order-oldprices__oldprice"><span class="js-total" data-total="55.00">55.00</span>
+                                                                TL</p>
+                                                            <div class="order-oldprices__discount">
+                                                                <span>%11</span>
+                                                                <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M6 6L0.803849 -9.78799e-07L11.1962 -7.02746e-08L6 6Z" fill="#49B546" />
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+
+                                                        <p class="order-newprice">
+                                                            <span class="js-price" data-price="45.00">45,00</span> TL
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="order-info">
+                                                        <p class="order-info-kg">Ağırlık : <span>1</span> kg</p>
+                                                        <p class="order-info-kg">Kg Fiyatı : <span>45,00</span> TL</p>
+                                                    </div>
+
+                                                    <div class="order-amount__container">
+                                                        <a href="javascript:;" class="btn-minus">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M5 12H19" stroke="#00671B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </a>
+                                                        <input type="hidden" value="1" class="js-amount">
+                                                        <p class="order-amount__container__amount js-amount-container">1
+                                                            Adet
+                                                        </p>
+                                                        <a href="javascript:;" class="btn-plus">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12 5V19M5 12H19" stroke="#00671B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="btn-close d-lg-none">
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9.94031 3.05957L3.82129 9.17859M3.82129 3.05957L9.94031 9.17859" stroke="#383838" stroke-width="1.01984" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+
+                                        <div class="order-wrapper d-flex d-lg-none">
+                                            <div class="order-prices d-none d-lg-block">
+                                                <div class="order-oldprices">
+                                                    <p class="order-oldprices__oldprice"><span class="js-total" data-total="55.00">55.00</span>
+                                                        TL</p>
+                                                    <div class="order-oldprices__discount">
+                                                        <span>%11</span>
+                                                        <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M6 6L0.803849 -9.78799e-07L11.1962 -7.02746e-08L6 6Z" fill="#49B546" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+
+                                                <p class="order-newprice">
+                                                    <span class="js-price" data-price="45.00">45,00</span> TL
+                                                </p>
+                                            </div>
+
+                                            <div class="order-info">
+                                                <p class="order-info-kg">Ağırlık : <span>1</span> kg</p>
+                                                <p class="order-info-kg">Kg Fiyatı : <span>45,00</span> TL</p>
+                                            </div>
+
+                                            <div class="order-amount__container">
+                                                <a href="javascript:;" class="btn-minus">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5 12H19" stroke="#00671B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </a>
+                                                <input type="hidden" value="1" class="js-amount">
+                                                <p class="order-amount__container__amount js-amount-container">1
+                                                    Adet
+                                                </p>
+                                                <a href="javascript:;" class="btn-plus">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 5V19M5 12H19" stroke="#00671B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                        </div>
+
+                        <div class="col-xl-3">
+                            <div class="order-summary-desktop">
+                                <div class="order-summary-desktop__wrapper">
+                                    <h4 class="order-summary-desktop__title">Sipariş Özeti</h4>
+                                    <div class="order-summary-desktop__content">
+                                        <div class="order-summary-desktop__info">
+                                            <p class="order-summary-desktop__text">Ürünler</p>
+                                            <p class="order-summary-desktop__price"><span>135,00</span>
+                                                TL</p>
+                                        </div>
+
+                                        <div class="order-summary-desktop__info">
+                                            <p class="order-summary-desktop__text">Kargo</p>
+                                            <div class="order-summary-desktop__cargo">
+                                                <div class="free-text">Ücretsiz</div>
+                                                <p class="order-summary-desktop__price-through"><span>30</span>TL</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="order-summary-desktop__total">
+                                        <p class="order-summary-desktop__total-text">Sepet Toplamı</p>
+                                        <p class="order-summary-desktop__total-price"><span>135,00</span>
+                                            TL</p>
+                                    </div>
+                                    <a href="#" class="btn-next-step">Sonraki Adım
+                                        <svg class="ml-2" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.1665 9.99996H15.8332M15.8332 9.99996L9.99984 4.16663M15.8332 9.99996L9.99984 15.8333" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
+            <div class="order-summary--sticky">
+                <div class="order-summary-mobile js-order-summary-mobile">
+                    <div class="order-summary-mobile__wrapper">
+                        <h4 class="order-summary-mobile__title">Sipariş Özeti</h4>
+                        <div class="order-summary-mobile__content">
+                            <div class="order-summary-mobile__info">
+                                <p class="order-summary-mobile__text">Ürünler</p>
+                                <p class="order-summary-mobile__price"><span>135,00</span>
+                                    TL</p>
+                            </div>
+
+                            <div class="order-summary-mobile__info">
+                                <p class="order-summary-mobile__text">Kargo</p>
+                                <div class="order-summary-mobile__cargo">
+                                    <div class="free-text">Ücretsiz</div>
+                                    <p class="order-summary-mobile__price-through"><span>30</span>TL</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="total-info d-xl-none">
+                    <div class="total-info__wrapper">
+                        <div class="total-info__basket-total">
+                            <p>Sepet Toplamı</p>
+                            <a href="#" class="btn-up js-btn-up">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.16675 12.9165L10.0001 7.08317L15.8334 12.9165" stroke="#101828" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="total-info__basket-total">
+                            <div class="discount">
+                                <span>%11</span>
+                                <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 6L0.803849 -9.78799e-07L11.1962 -7.02746e-08L6 6Z" fill="#49B546" />
+                                </svg>
+                            </div>
+
+                            <p class="price"><span>55.00</span>
+                                TL</p>
+                        </div>
+
+                    </div>
+                    <a href="#" class="btn-approve-basket">Sepeti Onayla</a>
+
+
+                </div>
+            </div>
+
+        </section>
         <section class="products">
             <div class="container">
                 <div class="row">
@@ -345,7 +563,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer class="footer">

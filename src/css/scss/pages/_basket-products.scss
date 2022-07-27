@@ -1,0 +1,72 @@
+.basket-products {
+  position: relative;
+
+  &__container {
+    @include media-breakpoint-up(lg) {
+      padding: rem(96) 0;
+    }
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eeeeee;
+    padding: rem(24) 0 0 0;
+  }
+
+  &__list {
+    margin-bottom: rem(70);
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    @include media-breakpoint-up(lg) {
+      margin-top: rem(32);
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #eeeeee;
+
+      @include media-breakpoint-up(lg) {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  &__mybasket {
+    display: flex;
+    &-title {
+      @include setFont(24px, semibold, rgba(37, 37, 37, 1), 32);
+    }
+
+    &-kg {
+      @include setFont(14px, semibold, rgba(0, 103, 27, 1), 32);
+      margin-left: rem(6);
+
+      @include media-breakpoint-up(lg) {
+        @include setFont(18px, semibold, rgba(0, 103, 27, 1), 32);
+      }
+    }
+  }
+
+  &__empty-link {
+    @include setFont(14px, medium, rgba(56, 56, 56, 1), 32);
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__remove-product {
+    @include setFont(14px, regular, rgba(37, 37, 37, 1), 20);
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

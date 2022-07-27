@@ -386,6 +386,12 @@ function picSliderResize() {
 //   }
 // });
 
+$(".js-btn-up").click(function () {
+  $(".js-order-summary-mobile").toggleClass("show");
+  $("body").toggleClass("open-summary-card");
+  $("body").toggleClass("no-scroll");
+});
+
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);

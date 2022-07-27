@@ -1,0 +1,7 @@
+.free-text {
+  background-color: #10a760;
+  border-radius: rem(45);
+  @include setFont(12px, medium, getColor(neutrals-white), 18);
+  padding: rem(2) rem(9);
+  margin-right: rem(9);
+}
