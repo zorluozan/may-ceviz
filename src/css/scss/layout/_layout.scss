@@ -80,6 +80,7 @@ body {
   }
 
   &.open-summary-card {
+    position: relative;
     .btn-up {
       transform: rotate(180deg);
     }

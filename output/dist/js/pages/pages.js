@@ -9,6 +9,7 @@ var pageList = [
   "contact.html",
   "contract-menu.html",
   "cookiepolicy.html",
+  "delivery-address.html",
   "empty-basket.html",
   "index.html",
   "kvkk.html",

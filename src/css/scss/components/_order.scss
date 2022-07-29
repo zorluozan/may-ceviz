@@ -135,9 +135,10 @@
   }
 
   &-summary {
-    &--sticky {
-      position: sticky;
+    &--fixed {
+      position: fixed;
       bottom: 0;
+      width: 100%;
       z-index: 90;
 
       @include media-breakpoint-up(xl) {
@@ -207,12 +208,6 @@
     }
 
     &-desktop {
-      display: none;
-
-      @include media-breakpoint-up(xl) {
-        display: block;
-      }
-
       &__wrapper {
         position: relative;
         border: 1px solid #eeeeee;

@@ -1,0 +1,86 @@
+.delivery-address {
+  &__wrapper {
+    @include media-breakpoint-up(lg) {
+      padding: rem(90) 0;
+    }
+  }
+  &__area {
+    padding: rem(32) 0;
+
+    @include media-breakpoint-up(lg) {
+      padding: rem(40) 0 0 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: rem(24);
+  }
+
+  &__title {
+    @include setFont(18px, medium, rgba(0, 0, 0, 1), 20);
+    margin-bottom: rem(24);
+  }
+
+  & .radio {
+    display: none;
+  }
+
+  &__label {
+    display: block;
+  }
+
+  & .radio:checked ~ .delivery-address__label .address-card {
+    background-color: rgba(230, 248, 234, 0.1);
+    border: 1.5px solid #00ab2d;
+  }
+
+  & .radio:checked ~ .delivery-address__label .address-card-tick {
+    display: block;
+    margin-right: rem(8);
+  }
+
+  &-checkbox {
+    padding: rem(24) 0 0 0;
+
+    @include media-breakpoint-up(lg) {
+      padding: rem(24) 0;
+    }
+
+    & .checkbox {
+      display: none;
+    }
+
+    &__button {
+      border: 1px solid rgba(208, 213, 221, 1);
+      border-radius: rem(4);
+      height: rem(20);
+      width: rem(20);
+      display: inline-block;
+      cursor: pointer;
+      margin-right: rem(8);
+
+      &::after {
+        content: url("/dist/media/img/contact/checkicon.svg");
+        display: block;
+        height: rem(20);
+        width: rem(20);
+        border-radius: rem(4);
+        background-color: getColor(primary-green-700);
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+    }
+
+    &__label {
+      @include setFont(14px, medium, #344054, 20);
+      display: flex;
+    }
+
+    &
+      .checkbox:checked
+      ~ .delivery-address-checkbox__label
+      .delivery-address-checkbox__button::after {
+      opacity: 1;
+    }
+  }
+}

@@ -1,5 +1,138 @@
 @import "jquery-modal/jquery.modal";
 
+.modal--new-address-form {
+  border-radius: rem(16);
+  padding: 0;
+  position: fixed;
+  overflow-y: scroll;
+  inset: rem(16);
+
+  @include media-breakpoint-up(md) {
+    position: relative;
+    inset: 0;
+    max-width: rem(570);
+    overflow-y: unset;
+  }
+}
+
+.modal--new-edit-address-form {
+  border-radius: rem(16);
+  padding: 0;
+  position: fixed;
+  overflow-y: scroll;
+  inset: rem(16);
+
+  @include media-breakpoint-up(md) {
+    position: relative;
+    inset: 0;
+    max-width: rem(570);
+    overflow-y: unset;
+  }
+}
+
+.modal__container {
+  position: relative;
+}
+
 .blocker {
-  z-index: 9;
+  z-index: 1000;
+  background: rgba(37, 37, 37, 0.45);
+}
+
+.addressform {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(20) rem(20) rem(12) rem(20);
+    border-bottom: 1px solid #eeeeee;
+
+    &-title {
+      @include setFont(16px, semibold, rgba(0, 0, 0, 1), 24);
+
+      @include media-breakpoint-up(lg) {
+        @include setFont(20px, semibold, rgba(0, 0, 0, 1), 30);
+      }
+    }
+  }
+
+  &__body {
+    padding: rem(16) 0 rem(32) 0;
+
+    &-title {
+      @include setFont(16px, medium, getColor(primary-green-800), 24);
+    }
+
+    & .form-group label {
+      @include setFont(14px, medium, #252525, 24);
+    }
+
+    & .form-group input {
+      border: 1px solid #d9d9d9;
+      border-radius: rem(8);
+      padding: rem(12) rem(16);
+      height: rem(48);
+
+      &::placeholder {
+        @include setFont(14px, regular, #848484, 24);
+      }
+    }
+
+    & .form-group textarea {
+      &::placeholder {
+        @include setFont(14px, regular, #848484, 24);
+      }
+    }
+
+    & .btn-save-address {
+      margin-top: rem(20);
+    }
+  }
+  &__body-wrapper {
+    overflow-y: scroll;
+  }
+
+  &__dropdown {
+    & .nav-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include setFont(14px, regular, #848484, 24);
+      background-color: #ffffff;
+      border: 1px solid #d9d9d9;
+      border-radius: rem(8);
+      padding: rem(12) rem(16);
+
+      &::after {
+        border: none;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxMyAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIuNzA4MzIgNC42MDQyNUw2LjQ5OTk5IDguMzk1OTFMMTAuMjkxNyA0LjYwNDI1IiBzdHJva2U9IiMxMDE4MjgiIHN0cm9rZS13aWR0aD0iMS41MTY2NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=");
+        width: rem(13);
+        height: rem(13);
+        transform: rotateX(0);
+      }
+    }
+
+    & .dropdown-menu.show {
+      min-width: 100%;
+      margin: 0;
+    }
+
+    & .dropdown-item {
+      padding: rem(4);
+    }
+
+    & .dropdown.show .nav-link::after {
+      transform: rotateX(180deg);
+    }
+  }
+}
+
+.close-form {
+  height: rem(28);
+  width: rem(28);
+  background-color: #f2f2f2;
+  border: 0.875px solid #eeeeee;
+  border-radius: rem(38);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }

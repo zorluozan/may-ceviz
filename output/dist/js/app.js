@@ -438,6 +438,25 @@ $(function () {
     ],
   });
 
+  $(".js-btn-add-address").on("click", function () {
+    $("#addressform").modal({
+      showClose: false,
+      closeClass: "js-close-form",
+    });
+  });
+
+  $(".js-btn-edit-link").on("click", function () {
+    $("#editaddressform").modal({
+      showClose: false,
+      closeClass: "js-close-form",
+    });
+  });
+
+  $(".js-close-form").on("click", function () {
+    $(".jquery-modal").hide();
+    $("body").removeAttr("style");
+  });
+
   if ($kvkkTable.length > 0) {
     generateTable();
   }

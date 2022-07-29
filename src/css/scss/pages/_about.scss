@@ -16,7 +16,7 @@
     }
 
     &-text {
-      text-align: center;
+      text-align: justify;
       @include setFont(14px, regular, getColor(neutrals-900), 24);
 
       @include media-breakpoint-up(lg) {
@@ -85,6 +85,7 @@
 
     &-text {
       @include setFont(14px, regular, getColor(neutrals-900), 24);
+      text-align: justify;
 
       @include media-breakpoint-up(lg) {
         @include setFont(16px, regular, getColor(neutrals-900), 24);

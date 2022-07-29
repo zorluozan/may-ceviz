@@ -248,198 +248,134 @@
     </header>
 
     <main class="main">
-        <section class="product-detail">
+        <section class="delivery-address">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="product-detail__link">
-                            <span>ÜRÜNLERİMİZ</span>
-                            <svg class="mx-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.83301 12.3334L10.1663 8.00008L5.83301 3.66675" stroke="#232323" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <span>FERNOR KABUKLU CEVİZ</span>
-                        </div>
-                    </div>
+                <div class="delivery-address__wrapper">
+                    <div class="row">
+                        <div class="col-12 col-xl-9">
+                            <a href="#" class="btn-back-link">
+                                <svg class="mr-2 mr-lg-3" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.6667 7.00008H1M1 7.00008L6.83333 12.8334M1 7.00008L6.83333 1.16675" stroke="#008523" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                Teslimat Adresi
+                            </a>
 
-                    <div class="col-12 p-0 p-lg-1">
-                        <div class="container p-0 p-lg-1">
-                            <div class="row no-gutters">
-                                <div class="col-sm-12 col-md-12 col-lg-6 mr-lg-4">
-                                    <div class="product-detail-slider js-product-detail-slider">
-                                        <div data-slider-id="package-2.5">
-                                            <div class="product-detail-slider__item">
-                                                <img src="/dist/media/img/product-detail/chandler/ceviz25.png" alt="Product Detail Image" class="img-fluid">
-                                            </div>
-                                        </div>
+                            <div class="delivery-address__area">
+                                <h4 class="delivery-address__title">Kayıtlı Adreslerim</h4>
 
-                                        <div data-slider-id="package-5">
-                                            <div class="product-detail-slider__item">
-                                                <img src="/dist/media/img/product-detail/chandler/ceviz5.png" alt="Product Detail Image" class="img-fluid">
-                                            </div>
-                                        </div>
+                                <ul class="delivery-address__list">
+                                    <li class="delivery-address__item">
+                                        <input type="radio" class="radio" id="radio1" name="radio">
+                                        <label class="delivery-address__label" for="radio1">
+                                            <div class="address-card">
+                                                <div class="address-card__heading">
+                                                    <h5 class="address-card__heading-type">Ev Adresim</h5>
+                                                    <div class="address-card__active-box">
+                                                        <div>
+                                                            <img src="/dist/media/img/delivery-address/tick.png" alt="Tick" class="address-card-tick">
+                                                        </div>
+                                                        <a href="#editaddressform" class="btn-edit-link js-btn-edit-link">Düzenle</a>
+                                                    </div>
+                                                </div>
 
-                                        <div data-slider-id="package-10">
-                                            <div class="product-detail-slider__item">
-                                                <img src="/dist/media/img/product-detail/chandler/ceviz10.png" alt="Product Detail Image" class="img-fluid">
-                                            </div>
-                                        </div>
+                                                <div class="address-card__info">
+                                                    <p class="address-card__info-address">
+                                                        Tekstilkent Koza Plaza B Blok No: K:19 32456 Esenler / İstanbul
+                                                    </p>
+                                                    <p class="address-card__info-phone">
+                                                        Telefon Numarası : <span>0521 221 33 44</span>
+                                                    </p>
 
-                                        <div data-slider-id="package-20">
-                                            <div class="product-detail-slider__item">
-                                                <img src="/dist/media/img/product-detail/chandler/ceviz20.png" alt="Product Detail Image" class="img-fluid">
+                                                    <p class="address-card__info-name">
+                                                        Ad Soyad : <span>Berkay</span> <span>Boz</span>
+                                                    </p>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
+                                        </label>
+                                    </li>
+
+                                    <li class="delivery-address__item">
+                                        <input type="radio" class="radio" id="radio2" name="radio">
+                                        <label class="delivery-address__label" for="radio2">
+                                            <div class="address-card">
+                                                <div class="address-card__heading">
+                                                    <h5 class="address-card__heading-type">İş Adresim</h5>
+                                                    <div class="address-card__active-box">
+                                                        <div>
+                                                            <img src="/dist/media/img/delivery-address/tick.png" alt="Tick" class="address-card-tick">
+                                                        </div>
+                                                        <a href="#editaddressform" class="btn-edit-link js-btn-edit-link">Düzenle</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="address-card__info">
+                                                    <p class="address-card__info-address">
+                                                        Tekstilkent Koza Plaza B Blok No: K:19 32456 Esenler / İstanbul
+                                                    </p>
+                                                    <p class="address-card__info-phone">
+                                                        Telefon Numarası : <span>0521 221 33 44</span>
+                                                    </p>
+
+                                                    <p class="address-card__info-name">
+                                                        Ad Soyad : <span>Berkay</span> <span>Boz</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                </ul>
+
+                                <a href="#addressform" class="btn-add-address js-btn-add-address">
+                                    <svg class="mr-3" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="32" height="32" fill="#FAFAFA" />
+                                        <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" fill="#FAFAFA" />
+                                        <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="#00671B" />
+                                        <path d="M21 15H17V11C17 10.7348 16.8946 10.4804 16.7071 10.2929C16.5196 10.1054 16.2652 10 16 10C15.7348 10 15.4804 10.1054 15.2929 10.2929C15.1054 10.4804 15 10.7348 15 11V15H11C10.7348 15 10.4804 15.1054 10.2929 15.2929C10.1054 15.4804 10 15.7348 10 16C10 16.2652 10.1054 16.5196 10.2929 16.7071C10.4804 16.8946 10.7348 17 11 17H15V21C15 21.2652 15.1054 21.5196 15.2929 21.7071C15.4804 21.8946 15.7348 22 16 22C16.2652 22 16.5196 21.8946 16.7071 21.7071C16.8946 21.5196 17 21.2652 17 21V17H21C21.2652 17 21.5196 16.8946 21.7071 16.7071C21.8946 16.5196 22 16.2652 22 16C22 15.7348 21.8946 15.4804 21.7071 15.2929C21.5196 15.1054 21.2652 15 21 15Z" fill="#00671B" />
+                                    </svg>
+                                    Yeni Adres Ekle
+                                </a>
+
+                                <div class="delivery-address-checkbox">
+                                    <input type="checkbox" class="checkbox" id="checkbox" name="checkbox">
+
+                                    <label class="delivery-address-checkbox__label" for="checkbox">
+                                        <span class="delivery-address-checkbox__button"></span>
+                                        Fatura adresim teslimat adresim ile aynı olsun.</label>
+
                                 </div>
+                            </div>
+                        </div>
 
-                                <div class="col-sm-12 col-md-12 col-lg-5">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-12 order-1">
-                                                <div class="product-detail__info">
-                                                    <h4 class="product-detail__info-title">Fernor Kabuklu Ceviz</h4>
-                                                    <ul class="product-detail__list">
-                                                        <li class="product-detail__item">
-                                                            Sert kabuklu olup, iç randımanı %45-47 oranındadır.
-                                                        </li>
-                                                        <li class="product-detail__item">
-                                                            Kuru meyve ağırlığı 9-11 gr, iç meyve ağırlığı 4,5-5,5 gr ‘dır.
-                                                        </li>
-                                                        <li class="product-detail__item">
-                                                            İç beyazlık oranı %85-100’dür.
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                        <div class="col-12 col-xl-3">
+                            <div class="order-summary-desktop">
+                                <div class="order-summary-desktop__wrapper">
+                                    <h4 class="order-summary-desktop__title">Sipariş Özeti</h4>
+                                    <div class="order-summary-desktop__content">
+                                        <div class="order-summary-desktop__info">
+                                            <p class="order-summary-desktop__text">Ürünler</p>
+                                            <p class="order-summary-desktop__price"><span>135,00</span>
+                                                TL</p>
+                                        </div>
+
+                                        <div class="order-summary-desktop__info">
+                                            <p class="order-summary-desktop__text">Kargo</p>
+                                            <div class="order-summary-desktop__cargo">
+                                                <div class="free-text">Ücretsiz</div>
+                                                <p class="order-summary-desktop__price-through"><span>30</span>TL</p>
                                             </div>
-                                            <div class="col-12 order-4">
-                                                <div class="product-detail__buttons">
-                                                    <a href="#" class="btn-addbasket">
-                                                        <svg class="mr-2" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M1.66675 5.9622V5.2622H0.966748V5.9622H1.66675ZM18.3334 5.9622H19.0334V5.2622H18.3334V5.9622ZM13.088 8.23493V8.93493H14.488V8.23493H13.088ZM5.5122 8.23493V8.93493H6.9122V8.23493H5.5122ZM15.3031 17.3834H4.69705V18.7834H15.3031V17.3834ZM4.69705 17.3834C3.41698 17.3834 2.36675 16.3332 2.36675 15.0531H0.966748C0.966748 17.1064 2.64379 18.7834 4.69705 18.7834V17.3834ZM2.36675 15.0531V5.9622H0.966748V15.0531H2.36675ZM1.66675 6.6622H18.3334V5.2622H1.66675V6.6622ZM17.6334 5.9622V15.0531H19.0334V5.9622H17.6334ZM17.6334 15.0531C17.6334 16.3332 16.5832 17.3834 15.3031 17.3834V18.7834C17.3564 18.7834 19.0334 17.1064 19.0334 15.0531H17.6334ZM14.488 8.23493V5.20463H13.088V8.23493H14.488ZM14.488 5.20463C14.488 2.73469 12.47 0.716748 10.0001 0.716748V2.11675C11.6968 2.11675 13.088 3.50789 13.088 5.20463H14.488ZM10.0001 0.716748C7.53015 0.716748 5.5122 2.73469 5.5122 5.20463H6.9122C6.9122 3.50789 8.30335 2.11675 10.0001 2.11675V0.716748ZM5.5122 5.20463V8.23493H6.9122V5.20463H5.5122Z" fill="white" />
-                                                        </svg>
-                                                        <span>Sepete Ekle</span>
-                                                    </a>
-
-                                                    <a href="#" class="btn-share">
-                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M4.22217 11.9998V19.7776C4.22217 20.2933 4.42703 20.7879 4.79168 21.1525C5.15634 21.5172 5.65091 21.722 6.16661 21.722H17.8333C18.349 21.722 18.8436 21.5172 19.2082 21.1525C19.5729 20.7879 19.7777 20.2933 19.7777 19.7776V11.9998M15.8888 6.16648L11.9999 2.27759M11.9999 2.27759L8.11106 6.16648M11.9999 2.27759V14.9165" stroke="#475467" stroke-width="1.86667" stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 order-3">
-                                                <div class="product-detail__priceContainer">
-                                                    <div class="product-detail__prices">
-                                                        <div class="product-detail__oldprices">
-                                                            <p class="product-detail__oldprices-oldprice"><span class="js-total" data-total="55.00">55.00</span>
-                                                                TL</p>
-                                                            <div class="product-detail__oldprices-discount">
-                                                                <span>%11</span>
-                                                                <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M6 6L0.803849 -9.78799e-07L11.1962 -7.02746e-08L6 6Z" fill="#49B546" />
-                                                                </svg>
-                                                            </div>
-                                                        </div>
-
-                                                        <p class="product-detail__newprice">
-                                                            <span class="js-price" data-price="45.00">45,00</span> TL
-                                                        </p>
-                                                    </div>
-
-                                                    <div class="product-detail__amountContainer">
-                                                        <a href="javascript:;" class="btn-minus js-btn-minus">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M5 12H19" stroke="#00671B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
-                                                        </a>
-                                                        <input type="hidden" value="1" class="js-amount">
-                                                        <p class="product-detail__amountContainer-amount js-amount-container">1
-                                                            Adet
-                                                        </p>
-                                                        <a href="javascript:;" class="btn-plus js-btn-plus">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M12 5V19M5 12H19" stroke="#00671B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
-
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 order-2">
-                                                <div class="product-detail__package">
-                                                    <h4 class="product-detail__package-title">Paket Seçin</h4>
-                                                    <div class="product-detail__package-wrapper">
-                                                        <div class="package">
-                                                            <input type="radio" class="radio" id="radio1" name="radio" checked>
-
-                                                            <label class="package__label" for="radio1">
-                                                                <div class="product-detail-pack js-package-btn" data-slider-href="package-2.5">
-                                                                    <p class="product-detail-pack-kg"><span>2.5</span> Kg</p>
-                                                                    <p class="product-detail-pack-price"><span>40,00</span>
-                                                                        TL</p>
-                                                                </div>
-                                                            </label>
-                                                        </div>
-
-                                                        <div class="package">
-                                                            <input type="radio" class="radio" id="radio2" name="radio">
-
-                                                            <label class="package__label" for="radio2">
-                                                                <div class="product-detail-pack js-package-btn" data-slider-href="package-5">
-                                                                    <p class="product-detail-pack-kg"><span>5</span> Kg</p>
-                                                                    <p class="product-detail-pack-price"><span>85,00</span>
-                                                                        TL</p>
-                                                                </div>
-                                                            </label>
-                                                        </div>
-
-                                                        <div class="package">
-                                                            <input type="radio" class="radio" id="radio3" name="radio">
-
-                                                            <label class="package__label" for="radio3">
-                                                                <div class="product-detail-pack js-package-btn" data-slider-href="package-10">
-                                                                    <p class="product-detail-pack-kg"><span>10</span> Kg</p>
-                                                                    <p class="product-detail-pack-price"><span>100,00</span>
-                                                                        TL</p>
-                                                                </div>
-                                                            </label>
-                                                        </div>
-
-                                                        <div class="package">
-                                                            <input type="radio" class="radio" id="radio4" name="radio">
-
-                                                            <label class="package__label" for="radio4">
-                                                                <div class="product-detail-pack js-package-btn" data-slider-href="package-20">
-                                                                    <p class="product-detail-pack-kg"><span>20</span> Kg</p>
-                                                                    <p class="product-detail-pack-price"><span>160,00</span>
-                                                                        TL</p>
-                                                                </div>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 order-5">
-                                                <div class="product-detail__delivery">
-                                                    <div>
-                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M12 21C9.61305 21 7.32387 20.0518 5.63604 18.364C3.94821 16.6761 3 14.3869 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12C21 14.3869 20.0518 16.6761 18.364 18.364C16.6761 20.0518 14.3869 21 12 21V21Z" stroke="#49B546" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-                                                            <path d="M16 10L11 15L8 12" stroke="#49B546" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                    <div class="product-detail__delivery-wrapper">
-                                                        <p class="product-detail__delivery-title">Ücretsiz Teslimat</p>
-                                                        <p class="product-detail__delivery-text">
-                                                            Siparişiniz seçtiğiniz teslimat adresine ücretsiz bir şekilde teslim
-                                                            edilir.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
                                         </div>
                                     </div>
+
+                                    <div class="order-summary-desktop__total">
+                                        <p class="order-summary-desktop__total-text">Sepet Toplamı</p>
+                                        <p class="order-summary-desktop__total-price"><span>135,00</span>
+                                            TL</p>
+                                    </div>
+                                    <a href="#" class="btn-next-step">Sonraki Adım
+                                        <svg class="ml-2" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.1665 9.99996H15.8332M15.8332 9.99996L9.99984 4.16663M15.8332 9.99996L9.99984 15.8333" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -447,6 +383,212 @@
                 </div>
             </div>
         </section>
+
+        <div id="addressform" class="modal modal--new-address-form">
+            <div class="addressform__wrapper">
+                <div class="addressform__header">
+                    <h5 class="addressform__header-title">Yeni Adres Ekle</h5>
+                    <a href="javascript:;" class="js-close-form close-form"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.375 6.625L6.625 15.375M6.625 6.625L15.375 15.375" stroke="#848484" stroke-width="1.45833" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </a>
+                </div>
+                <div class="addressform__body">
+                    <div class="container">
+                        <form class="row" id="addressForm">
+                            <div class="col-12">
+                                <h4 class="addressform__body-title">Kişisel Bilgiler</h4>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                <div class="form-group">
+                                    <label for="name">Ad</label>
+                                    <input id="name" name="name" type="text" class="form-control" aria-describedby="name" placeholder="Ad" data-inputmask="'placeholder':''" data-inputmask-regex="[a-zA-ZğüşöçıİĞÜŞÖÇ]+">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                <div class="form-group">
+                                    <label for="surname">Soyad</label>
+                                    <input id="surname" name="surname" type="text" class="form-control" aria-describedby="surname" placeholder="Soyad" data-inputmask="'placeholder':''" data-inputmask-regex="[a-zA-ZğüşöçıİĞÜŞsÖÇ]+">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="phone">Telefon Numarası</label>
+                                    <input id="phone" name="phone" type="text" class="form-control" aria-describedby="phone" placeholder="Telefon Numarası" data-inputmask="'mask': '+99 (999) 999 99 99', 'placeholder':'+90 (___) ___ __ __'" inputmode="text">
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <h4 class="addressform__body-title">Adres Bilgileri</h4>
+                            </div>
+
+
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="city">Şehir</label>
+                                    <div class="addressform__dropdown">
+                                        <div class="dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="cities" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Şehir
+                                            </a>
+
+                                            <div class="dropdown-menu" aria-labelledby="cities">
+                                                <a class="dropdown-item" href="#">İstanbul</a>
+                                                <a class="dropdown-item" href="#">İzmir</a>
+                                                <a class="dropdown-item" href="#">Bursa</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="couty">İlçe</label>
+                                    <div class="addressform__dropdown">
+                                        <div class="dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="cities" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                İlçe
+                                            </a>
+
+                                            <div class="dropdown-menu" aria-labelledby="cities">
+                                                <a class="dropdown-item" href="#">Esenyurt</a>
+                                                <a class="dropdown-item" href="#">Avcılar</a>
+                                                <a class="dropdown-item" href="#">Bayrampaşa</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="address">Adres</label>
+                                    <textarea id="address" name="address" type="text" data-inputmask="'placeholder':''" class="form-control" rows="4" placeholder="Diğer bilgileri girin"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="name">Adres Adı</label>
+                                    <input id="name" name="name" type="text" class="form-control" aria-describedby="name" placeholder="Adres Adı" data-inputmask="'placeholder':''" data-inputmask-regex="[a-zA-ZğüşöçıİĞÜŞÖÇ]+">
+                                </div>
+                            </div>
+
+
+                            <div class="col-12">
+                                <button type="submit" class="btn-save-address">Adresi Kaydet</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="editaddressform" class="modal modal--new-edit-address-form">
+            <div class="addressform__wrapper">
+                <div class="addressform__header">
+                    <h5 class="addressform__header-title">Adres Düzenle</h5>
+                    <a href="javascript:;" class="js-close-form close-form"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.375 6.625L6.625 15.375M6.625 6.625L15.375 15.375" stroke="#848484" stroke-width="1.45833" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </a>
+                </div>
+                <div class="addressform__body">
+                    <div class="container">
+                        <form class="row" id="addressForm">
+                            <div class="col-12">
+                                <h4 class="addressform__body-title">Kişisel Bilgiler</h4>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                <div class="form-group">
+                                    <label for="name">Ad</label>
+                                    <input id="name" name="name" type="text" class="form-control" aria-describedby="name" placeholder="Ad" data-inputmask="'placeholder':''" data-inputmask-regex="[a-zA-ZğüşöçıİĞÜŞÖÇ]+">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                <div class="form-group">
+                                    <label for="surname">Soyad</label>
+                                    <input id="surname" name="surname" type="text" class="form-control" aria-describedby="surname" placeholder="Soyad" data-inputmask="'placeholder':''" data-inputmask-regex="[a-zA-ZğüşöçıİĞÜŞsÖÇ]+">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="phone">Telefon Numarası</label>
+                                    <input id="phone" name="phone" type="text" class="form-control" aria-describedby="phone" placeholder="Telefon Numarası" data-inputmask="'mask': '+99 (999) 999 99 99', 'placeholder':'+90 (___) ___ __ __'" inputmode="text">
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <h4 class="addressform__body-title">Adres Bilgileri</h4>
+                            </div>
+
+
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="city">Şehir</label>
+                                    <div class="addressform__dropdown">
+                                        <div class="dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="cities" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Şehir
+                                            </a>
+
+                                            <div class="dropdown-menu" aria-labelledby="cities">
+                                                <a class="dropdown-item" href="#">İstanbul</a>
+                                                <a class="dropdown-item" href="#">İzmir</a>
+                                                <a class="dropdown-item" href="#">Bursa</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="couty">İlçe</label>
+                                    <div class="addressform__dropdown">
+                                        <div class="dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="cities" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                İlçe
+                                            </a>
+
+                                            <div class="dropdown-menu" aria-labelledby="cities">
+                                                <a class="dropdown-item" href="#">Esenyurt</a>
+                                                <a class="dropdown-item" href="#">Avcılar</a>
+                                                <a class="dropdown-item" href="#">Bayrampaşa</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="address">Adres</label>
+                                    <textarea id="address" name="address" type="text" data-inputmask="'placeholder':''" class="form-control" rows="4" placeholder="Diğer bilgileri girin"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="name">Adres Adı</label>
+                                    <input id="name" name="name" type="text" class="form-control" aria-describedby="name" placeholder="Adres Adı" data-inputmask="'placeholder':''" data-inputmask-regex="[a-zA-ZğüşöçıİĞÜŞÖÇ]+">
+                                </div>
+                            </div>
+
+
+                            <div class="col-12">
+                                <button type="submit" class="btn-save-address">Adresi Kaydet</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
